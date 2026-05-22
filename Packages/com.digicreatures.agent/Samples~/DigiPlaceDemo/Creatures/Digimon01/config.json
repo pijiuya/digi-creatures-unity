@@ -1,0 +1,13 @@
+{
+    "backend": "local",
+    "localEndpoint": "http://localhost:11434/v1/chat/completions",
+    "onlineEndpoint": "https://api.openai.com/v1/chat/completions",
+    "localModel": "qwen2.5:3b",
+    "onlineModel": "gpt-4.1-mini",
+    "onlineApiKeyEnvironmentVariable": "OPENAI_API_KEY",
+    "temperature": 0.699999988079071,
+    "decisionIntervalSeconds": 12.0,
+    "requestTimeoutSeconds": 60,
+    "recentMemoryLimit": 8,
+    "summaryEveryEvents": 12
+}

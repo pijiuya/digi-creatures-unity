@@ -1,0 +1,19 @@
+{
+  "name": "DigiCreatures.Runtime",
+  "rootNamespace": "DigiCreatures",
+  "references": [
+    "Unity.AI.Navigation",
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
