@@ -44,11 +44,11 @@ namespace DigiCreaturesEditor
                     return;
                 }
 
-                string exportPath = Path.Combine(ExportFolder, ExportFileName).Replace("\\", "/");
+                string exportPath = Path.GetFullPath(Path.Combine(ExportFolder, ExportFileName)).Replace("\\", "/");
                 AssetDatabase.ExportPackage(
                     assetPaths,
                     exportPath,
-                    ExportPackageOptions.Recurse | ExportPackageOptions.Interactive);
+                    ExportPackageOptions.Recurse);
                 Debug.Log($"DigiCreatures unitypackage exported to {exportPath}");
             }
             finally
