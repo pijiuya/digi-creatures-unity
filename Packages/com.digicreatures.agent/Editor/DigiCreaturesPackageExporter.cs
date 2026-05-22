@@ -31,6 +31,24 @@ namespace DigiCreaturesEditor
 
                 Directory.CreateDirectory(ExportFolder);
                 FileUtil.CopyFileOrDirectory(PackageRoot, ExportStagingRoot);
+                string packageSamplesPath = Path.Combine(PackageRoot, "Samples~");
+                string stagingSamplesPath = Path.Combine(ExportStagingRoot, "Samples");
+                if (Directory.Exists(packageSamplesPath))
+                {
+                    if (Directory.Exists(stagingSamplesPath))
+                    {
+                        FileUtil.DeleteFileOrDirectory(stagingSamplesPath);
+                    }
+
+                    FileUtil.CopyFileOrDirectory(packageSamplesPath, stagingSamplesPath);
+                }
+
+                string hiddenStagingSamplesPath = Path.Combine(ExportStagingRoot, "Samples~");
+                if (Directory.Exists(hiddenStagingSamplesPath))
+                {
+                    FileUtil.DeleteFileOrDirectory(hiddenStagingSamplesPath);
+                }
+
                 AssetDatabase.Refresh();
 
                 string[] assetPaths = AssetDatabase
