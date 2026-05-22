@@ -2,7 +2,7 @@
 
 `DigiCreatures Agent` 是一个 Unity 数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、NavMesh、语义物体、语义区域、字幕和摄像机逻辑组合成一个可复用系统，让虚拟生物可以在场景中自主选择目标、移动、停留、表达想法并触发简单互动。
 
-当前版本：`0.1.0`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
+当前版本：`0.1.1`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
 
 ## 安装方式
 
@@ -30,7 +30,7 @@ DigiCreatures > Export UnityPackage
 数字生物 > 高级设置 > 导出 UnityPackage
 ```
 
-导出文件默认位于 `Builds/DigiCreaturesAgent-0.1.0.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
+导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.1.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
 
 ## 依赖
 
@@ -77,7 +77,23 @@ http://localhost:11434/v1/chat/completions
 
 `数字生物 > 模型管理` 中的下载按钮会显示进度条。下载完成后会进入“下载完成，刷新中...”状态，直到 `ollama list` 能确认该模型，随后按钮显示 `已下载` 并自动选中。
 
-Windows 客户机需要保证 `ollama` 在 `PATH` 中。插件直接调用 `ollama list`、`ollama pull`、`ollama serve`，不会依赖 macOS 的 `/bin/zsh`。只有用户自定义启动命令才会通过 shell 执行。
+Windows 客户机需要保证 `ollama` 在 `PATH` 中。macOS/Linux 会优先尝试常见安装路径，例如 Homebrew 的 `/opt/homebrew/bin/ollama`、`/usr/local/bin/ollama` 和 Ollama.app 内置路径；找不到时再回退到 PATH。插件不会依赖 macOS 的 `/bin/zsh` 执行 `ollama list/pull/serve`。只有用户自定义启动命令才会通过 shell 执行。
+
+## 极简本机烟测
+
+如果想验证“空场景 + 本地模型 + NavMesh + 语义互动”是否可用，可以运行：
+
+```text
+数字生物 > 高级设置 > 测试 > 运行 60 秒极简本机测试
+```
+
+工具会创建独立场景 `Assets/DigiCreaturesSmokeTest/DigiCreatures_MinimalSmoke.unity`，包含一个平面 NavMesh、一个胶囊 agent、三个语义物体、一个语义区域和底部字幕。测试结束后报告写入：
+
+```text
+Library/DigiCreaturesTestRuns/minimal-smoke-*.md
+```
+
+报告会统计 agent 是否在 NavMesh 上、移动距离、LLM 成功/失败次数、决策次数和互动次数。这个工具不会修改 DigiPlace demo 场景。
 
 ## 线上模型
 

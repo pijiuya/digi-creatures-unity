@@ -53,6 +53,7 @@ namespace DigiCreatures
         private readonly Queue<string> recentIntentKeys = new Queue<string>();
         private int dialogueFallbackIndex;
         private int intentFallbackIndex;
+        private int fallbackMovementDecisionCount;
         private string resolvedSubtitleName;
 
         public CreatureAgentMode AgentMode
@@ -427,6 +428,19 @@ namespace DigiCreatures
                 }
             }
 
+            if (decision == null)
+            {
+                fallbackMovementDecisionCount++;
+                if (fallbackMovementDecisionCount % 2 == 1)
+                {
+                    MovementGoal semanticFallback = BuildFallbackSemanticTargetGoal(1f, "offline fallback semantic target");
+                    if (semanticFallback != null)
+                    {
+                        return semanticFallback;
+                    }
+                }
+            }
+
             MovementGoal regionGoal = ResolveRegionGoal(decision, 1f, "LLM selected semantic region");
             if (regionGoal != null)
             {
@@ -492,6 +506,29 @@ namespace DigiCreatures
             }
 
             return MovementGoal.FromMarker(locations[0]);
+        }
+
+        private MovementGoal BuildFallbackSemanticTargetGoal(float radiusScale, string source)
+        {
+            if (semanticTargets == null || semanticTargets.Length == 0)
+            {
+                return null;
+            }
+
+            foreach (CreatureSemanticTarget target in semanticTargets
+                         .Where(target => target != null && target.navigationKind != CreatureNavigationKind.Blocked)
+                         .OrderBy(target => string.Equals(target.targetId, lastTargetId, System.StringComparison.OrdinalIgnoreCase) ? 1 : 0)
+                         .ThenByDescending(target => Mathf.Max(1, target.interestWeight))
+                         .ThenBy(target => Vector3.Distance(transform.position, target.transform.position)))
+            {
+                MovementGoal goal = BuildGoalNearSemanticTarget(target, radiusScale, source);
+                if (goal != null)
+                {
+                    return goal;
+                }
+            }
+
+            return null;
         }
 
         private MovementGoal ApplyDiversityCooldown(MovementGoal destination, CreatureDecision decision)
@@ -585,15 +622,23 @@ namespace DigiCreatures
                 dwellSeconds = Random.Range(1.2f, 3.5f),
                 targetId = destination.SemanticTargetId,
                 targetName = destination.DisplayName,
-                targetInterest = "Fallback chose a reachable scene point.",
+                targetInterest = string.IsNullOrWhiteSpace(destination.SemanticTargetId)
+                    ? "模型信号暂时安静，我选择一个可达的观测区域继续巡航。"
+                    : $"模型信号暂时安静，我先靠近{destination.DisplayName}，确认它是否会回应星图传感器。",
                 regionId = destination.RegionId,
                 navigationKind = destination.NavigationKind.ToString(),
                 approachPointId = destination.Id,
-                activity = destination.IsWander ? "wander" : "approach",
-                dialogue = destination.IsWander
+                activity = !string.IsNullOrWhiteSpace(destination.SemanticTargetId)
+                    ? "interact"
+                    : destination.IsWander ? "wander" : "approach",
+                dialogue = !string.IsNullOrWhiteSpace(destination.SemanticTargetId)
+                    ? "我先靠近这个目标，看看它会不会回应我的星图信号。"
+                    : destination.IsWander
                     ? "我沿着这片区域慢慢巡航，看看有没有遗失星图的微光。"
                     : "我靠近那里观星，也许能测到回家的方向。",
-                intent = "模型信号暂时安静，我先按外星宇航员机器人的直觉，寻找能对齐天空和塔影的可观测点。",
+                intent = !string.IsNullOrWhiteSpace(destination.SemanticTargetId)
+                    ? "本地模型暂时沉默时，真实互动比继续空想更能验证这个世界是否有可回应的物体。"
+                    : "模型信号暂时安静，我先按外星宇航员机器人的直觉，寻找能对齐天空和塔影的可观测点。",
                 memoryNote = $"Fallback wandering led to {destination.DisplayName}."
             };
         }

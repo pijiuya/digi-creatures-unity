@@ -18,6 +18,7 @@ MemoryCaptures/
 *.opendb
 *.VC.db
 Assets/__DigiCreaturesAgentExport/
+Assets/DigiCreaturesSmokeTest/
 Assets/Creatures/**/memory.jsonl
 Assets/Creatures/**/memory.jsonl.meta
 Assets/Creatures/**/test-memory.jsonl

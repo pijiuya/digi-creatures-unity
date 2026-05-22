@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ namespace DigiCreaturesEditor
         private const string PackageRoot = "Packages/com.digicreatures.agent";
         private const string ExportStagingRoot = "Assets/__DigiCreaturesAgentExport";
         private const string ExportFolder = "Builds";
-        private const string ExportFileName = "DigiCreaturesAgent-0.1.0.unitypackage";
 
         [MenuItem("DigiCreatures/Export UnityPackage")]
         [MenuItem("数字生物/高级设置/导出 UnityPackage")]
@@ -62,7 +62,7 @@ namespace DigiCreaturesEditor
                     return;
                 }
 
-                string exportPath = Path.GetFullPath(Path.Combine(ExportFolder, ExportFileName)).Replace("\\", "/");
+                string exportPath = Path.GetFullPath(Path.Combine(ExportFolder, $"DigiCreaturesAgent-{GetPackageVersion()}.unitypackage")).Replace("\\", "/");
                 AssetDatabase.ExportPackage(
                     assetPaths,
                     exportPath,
@@ -77,6 +77,18 @@ namespace DigiCreaturesEditor
                     AssetDatabase.Refresh();
                 }
             }
+        }
+
+        private static string GetPackageVersion()
+        {
+            string packageJsonPath = Path.Combine(PackageRoot, "package.json");
+            if (!File.Exists(packageJsonPath))
+            {
+                return "0.0.0";
+            }
+
+            Match match = Regex.Match(File.ReadAllText(packageJsonPath), "\"version\"\\s*:\\s*\"([^\"]+)\"");
+            return match.Success ? match.Groups[1].Value : "0.0.0";
         }
     }
 }

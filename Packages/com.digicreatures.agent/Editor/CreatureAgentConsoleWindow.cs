@@ -1130,16 +1130,77 @@ namespace DigiCreaturesEditor
 
         private void StartToolProcess(string fileName, string arguments, out Process process)
         {
+            string resolvedFileName = ResolveToolFileName(fileName);
             try
             {
-                process = CreateProcess(fileName, arguments);
+                process = CreateProcess(resolvedFileName, arguments);
                 StartAndRead(process);
             }
             catch (Exception ex)
             {
                 process = null;
-                testResult = "错误：" + ex.Message;
+                testResult = "错误：" + DescribeToolStartFailure(fileName, resolvedFileName, ex.Message);
             }
+        }
+
+        private static string ResolveToolFileName(string fileName)
+        {
+            if (string.Equals(fileName, "ollama", StringComparison.OrdinalIgnoreCase))
+            {
+                return ResolveOllamaExecutablePath();
+            }
+
+            return fileName;
+        }
+
+        private static string ResolveOllamaExecutablePath()
+        {
+#if UNITY_EDITOR_OSX
+            string[] candidates =
+            {
+                "/opt/homebrew/bin/ollama",
+                "/usr/local/bin/ollama",
+                "/Applications/Ollama.app/Contents/Resources/ollama"
+            };
+
+            foreach (string candidate in candidates)
+            {
+                if (File.Exists(candidate))
+                {
+                    return candidate;
+                }
+            }
+#elif UNITY_EDITOR_LINUX
+            string[] candidates =
+            {
+                "/usr/local/bin/ollama",
+                "/usr/bin/ollama",
+                "/snap/bin/ollama"
+            };
+
+            foreach (string candidate in candidates)
+            {
+                if (File.Exists(candidate))
+                {
+                    return candidate;
+                }
+            }
+#endif
+
+            return "ollama";
+        }
+
+        private static string DescribeToolStartFailure(string toolName, string resolvedFileName, string message)
+        {
+            if (string.Equals(toolName, "ollama", StringComparison.OrdinalIgnoreCase))
+            {
+                string pathHint = string.Equals(toolName, resolvedFileName, StringComparison.OrdinalIgnoreCase)
+                    ? "未找到可执行文件路径"
+                    : $"已尝试 {resolvedFileName}";
+                return $"{message}\n{pathHint}。请确认 Ollama 已安装；Windows 需把 ollama 加入 PATH，macOS 会自动尝试 Homebrew 和 Ollama.app 常见路径。";
+            }
+
+            return message;
         }
 
         private static Process CreateProcess(string fileName, string arguments)

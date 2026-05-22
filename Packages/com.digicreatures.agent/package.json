@@ -1,6 +1,6 @@
 {
   "name": "com.digicreatures.agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "DigiCreatures Agent",
   "description": "LLM-driven virtual creature agents for Unity scenes, including semantic objects, memory files, navigation, subtitles, camera helpers, and a DigiPlace demo.",
   "unity": "6000.0",
