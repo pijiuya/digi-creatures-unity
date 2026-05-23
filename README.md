@@ -4,9 +4,23 @@
 
 `DigiCreatures Agent` 是一个用于 Unity 的数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、语义物体、NavMesh、自主移动、字幕表达、摄像机和互动动作组合成一套可复用系统，让虚拟生物能在场景中自己选择目标、移动、观察、表达想法并与物体发生互动。
 
-Current version / 当前版本：`0.1.7`
+Current version / 当前版本：`0.1.8`
 
 Unity target / Unity 目标版本：Unity `2022.3 LTS` 到 Unity `6.x`。已在 Unity `6.4 (6000.4.7f1)` 上验证，并针对 Unity `6.0` Windows 导入和编译做兼容处理。
+
+Compatibility status / 兼容状态：
+
+- UPM Git install is the recommended path. Unity resolves AI Navigation, glTFast, Input System, UGUI, TextMeshPro, and built-in modules through package dependencies.
+- `.unitypackage` import is also supported for customer handoff. It includes a lightweight dependency installer; if Unity does not auto-start it after import, run `DigiCreatures > Install Dependencies` or `数字生物 > 高级设置 > 安装依赖`.
+- Cinemachine is not required. The DigiPlace demo uses a package-local camera helper and does not compile against Cinemachine 2 or Cinemachine 3 APIs.
+- Universal Render Pipeline is not a hard dependency. Customers can use Built-in, URP, or their own render setup.
+
+兼容状态：
+
+- 推荐使用 UPM Git 安装。Unity 会通过包依赖解析 AI Navigation、glTFast、Input System、UGUI、TextMeshPro 和内置模块。
+- 也支持 `.unitypackage` 手动导入，方便客户交付。包内带轻量依赖安装器；如果 Unity 导入后没有自动启动，请手动运行 `DigiCreatures > Install Dependencies` 或 `数字生物 > 高级设置 > 安装依赖`。
+- 不需要 Cinemachine。DigiPlace demo 使用插件自己的摄像机辅助逻辑，不再编译引用 Cinemachine 2/3 API。
+- URP 不是硬依赖。客户可以使用 Built-in、URP 或自己的渲染配置。
 
 Repository / 仓库：
 
@@ -33,7 +47,7 @@ The root URL is supported from `0.1.3` onward. If a customer already uses the ol
 Release package / UnityPackage 下载：
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.7
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.8
 ```
 
 ## What It Does / 项目能做什么
@@ -251,7 +265,7 @@ For private repositories, the customer machine must be authenticated with GitHub
 Download from release:
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.7
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.8
 ```
 
 Or export from this development project:
@@ -264,19 +278,18 @@ DigiCreatures > Export UnityPackage
 The exporter creates:
 
 ```text
-Builds/DigiCreaturesAgent-0.1.7.unitypackage
+Builds/DigiCreaturesAgent-0.1.8.unitypackage
 ```
 
-The UnityPackage imports to `Assets/DigiCreaturesAgent`. It includes an independent dependency installer that attempts to add AI Navigation, glTFast, Input System, URP, and UGUI automatically.
+The UnityPackage imports to `Assets/DigiCreaturesAgent`. It includes an independent dependency installer that attempts to add AI Navigation, glTFast, Input System, and UGUI automatically.
 
-`.unitypackage` 会导入到 `Assets/DigiCreaturesAgent`，并包含一个独立依赖安装器，会自动尝试安装 AI Navigation、glTFast、Input System、URP 和 UGUI。
+`.unitypackage` 会导入到 `Assets/DigiCreaturesAgent`，并包含一个独立依赖安装器，会自动尝试安装 AI Navigation、glTFast、Input System 和 UGUI。
 
 ## Required Dependencies / 必需依赖
 
 - `com.unity.ai.navigation`
 - `com.unity.cloud.gltfast`
 - `com.unity.inputsystem`
-- `com.unity.render-pipelines.universal`
 - `com.unity.ugui`
 - TextMeshPro
 
@@ -457,19 +470,19 @@ The repository `.gitignore` already excludes Unity cache folders, local smoke te
 Latest release:
 
 ```text
-v0.1.7
+v0.1.8
 ```
 
 UnityPackage:
 
 ```text
-DigiCreaturesAgent-0.1.7.unitypackage
+DigiCreaturesAgent-0.1.8.unitypackage
 ```
 
 SHA256:
 
 ```text
-5f303c726077ed304e89e9a316b60d6c274671978577f36ecb311393d8b1f372
+5dc18b32f759603c16231a37a6bb2550cd360058eb2b53596ebaccbd43b0106c
 ```
 
 ## Roadmap / 后续计划

@@ -30,22 +30,14 @@ public class UpdateCollectibleCount : MonoBehaviour
         Type collectibleType = Type.GetType("Collectible");
         if (collectibleType != null)
         {
-#if UNITY_6000_3_OR_NEWER
-            totalCollectibles += FindObjectsByType(collectibleType).Length;
-#else
-            totalCollectibles += FindObjectsByType(collectibleType, FindObjectsSortMode.None).Length;
-#endif
+            totalCollectibles += FindObjectsOfType(collectibleType).Length;
         }
 
         // Optionally, check and count objects of type Collectible2D as well if needed
         Type collectible2DType = Type.GetType("Collectible2D");
         if (collectible2DType != null)
         {
-#if UNITY_6000_3_OR_NEWER
-            totalCollectibles += FindObjectsByType(collectible2DType).Length;
-#else
-            totalCollectibles += FindObjectsByType(collectible2DType, FindObjectsSortMode.None).Length;
-#endif
+            totalCollectibles += FindObjectsOfType(collectible2DType).Length;
         }
 
         // Update the collectible count display

@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.Cinemachine;
 
 namespace StarterAssets
 {
@@ -14,8 +13,6 @@ namespace StarterAssets
         private Quaternion _startingRotation;
 
         private CharacterController _characterController;
-
-        public CinemachineCamera vCam;
 
         private ThirdPersonController _thirdPersonController;
         public AudioClip respawnSound;

@@ -2,7 +2,6 @@
   "name": "DigiCreatures.Runtime",
   "rootNamespace": "DigiCreatures",
   "references": [
-    "Unity.AI.Navigation",
     "Unity.InputSystem",
     "Unity.TextMeshPro",
     "Unity.ugui"
@@ -13,7 +12,45 @@
   "overrideReferences": false,
   "precompiledReferences": [],
   "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
+  "defineConstraints": [
+    "DIGICREATURES_HAS_INPUTSYSTEM",
+    "DIGICREATURES_HAS_UGUI",
+    "DIGICREATURES_HAS_MODULE_AI",
+    "DIGICREATURES_HAS_MODULE_ANIMATION",
+    "DIGICREATURES_HAS_MODULE_UI",
+    "DIGICREATURES_HAS_MODULE_UNITYWEBREQUEST"
+  ],
+  "versionDefines": [
+    {
+      "name": "com.unity.inputsystem",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_INPUTSYSTEM"
+    },
+    {
+      "name": "com.unity.ugui",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_UGUI"
+    },
+    {
+      "name": "com.unity.modules.ai",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_MODULE_AI"
+    },
+    {
+      "name": "com.unity.modules.animation",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_MODULE_ANIMATION"
+    },
+    {
+      "name": "com.unity.modules.ui",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_MODULE_UI"
+    },
+    {
+      "name": "com.unity.modules.unitywebrequest",
+      "expression": "",
+      "define": "DIGICREATURES_HAS_MODULE_UNITYWEBREQUEST"
+    }
+  ],
   "noEngineReferences": false
 }

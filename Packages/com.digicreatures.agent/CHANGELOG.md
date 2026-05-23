@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.8
+
+- Removed an unused hard reference to Cinemachine from the DigiPlace demo `RespawnPlayer` sample script so imported `.unitypackage` demos compile in projects that do not have Cinemachine installed.
+- Renamed the sample third-person camera target field away from Cinemachine terminology while preserving existing serialized demo references.
+- Made `.unitypackage` dependency installation safer by compiling the lightweight installer before the main runtime/editor assemblies when required packages are missing, and removed URP from the auto-install list.
+- Added a dedicated demo assembly definition so sample scripts wait for their UGUI/TextMeshPro/Input System dependencies instead of failing before the auto-installer can run.
+- Removed stale Unity performance-test resource files from the demo package because they referenced old project-only dependencies and were not needed at runtime.
+
 ## 0.1.7
 
 - Lowered the package baseline to Unity `2022.3` while keeping Unity 6 compatibility.

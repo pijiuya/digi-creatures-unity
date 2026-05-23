@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Callbacks;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
 
@@ -16,8 +17,15 @@ namespace DigiCreaturesInstaller
             new Dependency("com.unity.ai.navigation", string.Empty),
             new Dependency("com.unity.cloud.gltfast", string.Empty),
             new Dependency("com.unity.inputsystem", string.Empty),
-            new Dependency("com.unity.render-pipelines.universal", string.Empty),
-            new Dependency("com.unity.ugui", string.Empty)
+            new Dependency("com.unity.ugui", string.Empty),
+            new Dependency("com.unity.modules.ai", string.Empty),
+            new Dependency("com.unity.modules.animation", string.Empty),
+            new Dependency("com.unity.modules.imgui", string.Empty),
+            new Dependency("com.unity.modules.jsonserialize", string.Empty),
+            new Dependency("com.unity.modules.physics", string.Empty),
+            new Dependency("com.unity.modules.screencapture", string.Empty),
+            new Dependency("com.unity.modules.ui", string.Empty),
+            new Dependency("com.unity.modules.unitywebrequest", string.Empty)
         };
 
         private static readonly Queue<Dependency> Pending = new Queue<Dependency>();
@@ -25,6 +33,12 @@ namespace DigiCreaturesInstaller
         private static Dependency currentDependency;
 
         static DigiCreaturesDependencyInstaller()
+        {
+            EditorApplication.delayCall += AutoInstallOnce;
+        }
+
+        [DidReloadScripts]
+        private static void OnScriptsReloaded()
         {
             EditorApplication.delayCall += AutoInstallOnce;
         }

@@ -1,0 +1,32 @@
+{
+  "name": "DigiCreatures.DigiPlaceDemo",
+  "rootNamespace": "",
+  "references": [
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "DIGICREATURES_DEMO_HAS_INPUTSYSTEM",
+    "DIGICREATURES_DEMO_HAS_UGUI"
+  ],
+  "versionDefines": [
+    {
+      "name": "com.unity.inputsystem",
+      "expression": "",
+      "define": "DIGICREATURES_DEMO_HAS_INPUTSYSTEM"
+    },
+    {
+      "name": "com.unity.ugui",
+      "expression": "",
+      "define": "DIGICREATURES_DEMO_HAS_UGUI"
+    }
+  ],
+  "noEngineReferences": false
+}

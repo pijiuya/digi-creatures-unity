@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+using UnityEngine;
+using UnityEngine.Serialization;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -59,9 +60,10 @@ namespace StarterAssets
         [Tooltip("What layers the character uses as ground")]
         public LayerMask GroundLayers;
 
-        [Header("Cinemachine")]
-        [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
-        public GameObject CinemachineCameraTarget;
+        [Header("Camera")]
+        [Tooltip("The camera pivot target used by this sample third-person controller.")]
+        [FormerlySerializedAs("CinemachineCameraTarget")]
+        public GameObject CameraTarget;
 
         [Tooltip("How far in degrees can you move the camera up")]
         public float TopClamp = 70.0f;
@@ -77,9 +79,8 @@ namespace StarterAssets
 
         public Vector2  LookSensitivity = new Vector2(7.5f, 5.0f);
 
-        // cinemachine
-        private float _cinemachineTargetYaw;
-        private float _cinemachineTargetPitch;
+        private float _cameraTargetYaw;
+        private float _cameraTargetPitch;
 
         // Camera starting position and rotation
 private Vector3 _cameraStartingPosition;
@@ -144,7 +145,7 @@ public bool IsRespawning { get; set; } = false;
 
         private void Start()
 {
-    _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
+    _cameraTargetYaw = CameraTarget.transform.rotation.eulerAngles.y;
 
     _hasAnimator = TryGetComponent(out _animator);
     _controller = GetComponent<CharacterController>();
@@ -158,8 +159,8 @@ public bool IsRespawning { get; set; } = false;
     AssignAnimationIDs();
 
     // Save the starting camera position and rotation
-    _cameraStartingPosition = CinemachineCameraTarget.transform.position;
-    _cameraStartingRotation = CinemachineCameraTarget.transform.rotation;
+    _cameraStartingPosition = CameraTarget.transform.position;
+    _cameraStartingRotation = CameraTarget.transform.rotation;
 
     // reset our timeouts on start
     _jumpTimeoutDelta = JumpTimeout;
@@ -209,12 +210,12 @@ public bool IsRespawning { get; set; } = false;
     // if respawning, reset to starting position and rotation
     if (IsRespawning)
     {
-        _cinemachineTargetYaw = 0f; // Reset yaw to zero (or configure as needed)
-        _cinemachineTargetPitch = 0f;
+        _cameraTargetYaw = 0f; // Reset yaw to zero (or configure as needed)
+        _cameraTargetPitch = 0f;
 
-        // Reset Cinemachine Camera Target to its starting state
-        CinemachineCameraTarget.transform.position = _cameraStartingPosition;
-        CinemachineCameraTarget.transform.rotation = _cameraStartingRotation;
+        // Reset the camera target to its starting state
+        CameraTarget.transform.position = _cameraStartingPosition;
+        CameraTarget.transform.rotation = _cameraStartingRotation;
 
         IsRespawning = false; // Reset the respawning flag
         return;
@@ -225,16 +226,16 @@ public bool IsRespawning { get; set; } = false;
     {
         float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-        _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier * LookSensitivity.x;
-        _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier * LookSensitivity.y;
+        _cameraTargetYaw += _input.look.x * deltaTimeMultiplier * LookSensitivity.x;
+        _cameraTargetPitch += _input.look.y * deltaTimeMultiplier * LookSensitivity.y;
     }
 
-    _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
-    _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+    _cameraTargetYaw = ClampAngle(_cameraTargetYaw, float.MinValue, float.MaxValue);
+    _cameraTargetPitch = ClampAngle(_cameraTargetPitch, BottomClamp, TopClamp);
 
-    CinemachineCameraTarget.transform.rotation = Quaternion.Euler(
-        _cinemachineTargetPitch + CameraAngleOverride,
-        _cinemachineTargetYaw,
+    CameraTarget.transform.rotation = Quaternion.Euler(
+        _cameraTargetPitch + CameraAngleOverride,
+        _cameraTargetYaw,
         0.0f
     );
 }
@@ -429,11 +430,11 @@ public bool IsRespawning { get; set; } = false;
         public void ResetCameraRotation(float targetYaw)
 {
     // Reset the yaw and pitch to default values (targetYaw for Y rotation, and 0 for pitch)
-    _cinemachineTargetYaw = targetYaw;
-    _cinemachineTargetPitch = 0f;
+    _cameraTargetYaw = targetYaw;
+    _cameraTargetPitch = 0f;
 
     // Reset the camera target's rotation explicitly
-    CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch, _cinemachineTargetYaw, 0f);
+    CameraTarget.transform.rotation = Quaternion.Euler(_cameraTargetPitch, _cameraTargetYaw, 0f);
 
     Debug.Log($"Camera Yaw reset to {targetYaw} degrees.");
 }
