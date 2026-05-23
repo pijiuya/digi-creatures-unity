@@ -4,7 +4,7 @@
 
 `DigiCreatures Agent` 是一个用于 Unity 的数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、语义物体、NavMesh、自主移动、字幕表达、摄像机和互动动作组合成一套可复用系统，让虚拟生物能在场景中自己选择目标、移动、观察、表达想法并与物体发生互动。
 
-Current version / 当前版本：`0.1.4`
+Current version / 当前版本：`0.1.5`
 
 Unity target / Unity 目标版本：Unity `6.x`，已在 Unity `6.4 (6000.4.7f1)` 上验证。
 
@@ -33,7 +33,7 @@ The root URL is supported from `0.1.3` onward. If a customer already uses the ol
 Release package / UnityPackage 下载：
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.4
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.5
 ```
 
 ## What It Does / 项目能做什么
@@ -251,7 +251,7 @@ For private repositories, the customer machine must be authenticated with GitHub
 Download from release:
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.4
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.5
 ```
 
 Or export from this development project:
@@ -264,7 +264,7 @@ DigiCreatures > Export UnityPackage
 The exporter creates:
 
 ```text
-Builds/DigiCreaturesAgent-0.1.4.unitypackage
+Builds/DigiCreaturesAgent-0.1.5.unitypackage
 ```
 
 The UnityPackage imports to `Assets/DigiCreaturesAgent`. It includes an independent dependency installer that attempts to add AI Navigation, glTFast, Input System, URP, and UGUI automatically.
@@ -457,19 +457,19 @@ The repository `.gitignore` already excludes Unity cache folders, local smoke te
 Latest release:
 
 ```text
-v0.1.4
+v0.1.5
 ```
 
 UnityPackage:
 
 ```text
-DigiCreaturesAgent-0.1.4.unitypackage
+DigiCreaturesAgent-0.1.5.unitypackage
 ```
 
 SHA256:
 
 ```text
-801bfc408597fb534c086d6f63a8070a2b6ba4d2263e75b9dce35666a778a374
+8efcfababcfb4d323fee8d3b6dd1de4e334a69c6da7fccf534fdbae08cec9cd0
 ```
 
 ## Roadmap / 后续计划

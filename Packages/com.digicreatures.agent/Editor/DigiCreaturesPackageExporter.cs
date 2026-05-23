@@ -98,7 +98,53 @@ namespace DigiCreaturesEditor
                 mapped = "Documentation/" + mapped.Substring("Documentation~/".Length);
             }
 
-            return UnityPackageRoot + "/" + mapped;
+            return MakeWindowsSafePackagePath(UnityPackageRoot + "/" + mapped);
+        }
+
+        private static string MakeWindowsSafePackagePath(string path)
+        {
+            string[] parts = path.Split('/');
+            for (int i = 0; i < parts.Length; i++)
+            {
+                parts[i] = MakeWindowsSafePathSegment(parts[i]);
+            }
+
+            return string.Join("/", parts);
+        }
+
+        private static string MakeWindowsSafePathSegment(string segment)
+        {
+            if (string.IsNullOrEmpty(segment))
+            {
+                return "asset";
+            }
+
+            string extension = Path.GetExtension(segment);
+            string name = string.IsNullOrEmpty(extension) ? segment : segment.Substring(0, segment.Length - extension.Length);
+            StringBuilder builder = new StringBuilder(name.Length);
+            foreach (char value in name)
+            {
+                if ((value >= 'a' && value <= 'z') ||
+                    (value >= 'A' && value <= 'Z') ||
+                    (value >= '0' && value <= '9') ||
+                    value == '-' ||
+                    value == '_')
+                {
+                    builder.Append(value);
+                }
+                else if (char.IsWhiteSpace(value))
+                {
+                    builder.Append('_');
+                }
+            }
+
+            string safeName = Regex.Replace(builder.ToString(), "_{2,}", "_").Trim('_');
+            if (string.IsNullOrWhiteSpace(safeName))
+            {
+                safeName = "asset_" + StableHash(segment).Substring(0, 8);
+            }
+
+            return safeName + extension;
         }
 
         private static void WriteUnityPackage(string exportPath, List<PackageAsset> assets)

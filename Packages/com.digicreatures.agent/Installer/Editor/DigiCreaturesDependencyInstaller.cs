@@ -13,11 +13,11 @@ namespace DigiCreaturesInstaller
 
         private static readonly Dependency[] RequiredDependencies =
         {
-            new Dependency("com.unity.ai.navigation", "2.0.9"),
-            new Dependency("com.unity.cloud.gltfast", "6.14.1"),
-            new Dependency("com.unity.inputsystem", "1.19.0"),
-            new Dependency("com.unity.render-pipelines.universal", "17.4.0"),
-            new Dependency("com.unity.ugui", "2.0.0")
+            new Dependency("com.unity.ai.navigation", string.Empty),
+            new Dependency("com.unity.cloud.gltfast", string.Empty),
+            new Dependency("com.unity.inputsystem", string.Empty),
+            new Dependency("com.unity.render-pipelines.universal", string.Empty),
+            new Dependency("com.unity.ugui", string.Empty)
         };
 
         private static readonly Queue<Dependency> Pending = new Queue<Dependency>();
@@ -104,7 +104,9 @@ namespace DigiCreaturesInstaller
             }
 
             currentDependency = Pending.Dequeue();
-            string identifier = currentDependency.Name + "@" + currentDependency.Version;
+            string identifier = string.IsNullOrWhiteSpace(currentDependency.Version)
+                ? currentDependency.Name
+                : currentDependency.Name + "@" + currentDependency.Version;
             UnityEngine.Debug.Log("DigiCreatures installing dependency: " + identifier);
             currentRequest = Client.Add(identifier);
         }

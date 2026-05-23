@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5
+
+- Rebuilt the `.unitypackage` format for Windows Unity 6.0 compatibility by avoiding PAX tar headers and exporting sample asset paths with ASCII-only names.
+- Relaxed the `.unitypackage` dependency installer so Unity chooses package versions compatible with the current editor instead of forcing Unity 6.4-era URP dependencies.
+- Lowered UPM dependency baselines to Unity 6.0-compatible AI Navigation and Input System versions, and removed URP as a hard package dependency.
+
 ## 0.1.4
 
 - Fixed an editor compile error in `DigiCreaturesPackageExporter` caused by `CompressionLevel` resolving ambiguously between `System.IO.Compression` and `UnityEngine` after package import.
