@@ -739,8 +739,10 @@ namespace DigiCreaturesEditor
         {
 #if UNITY_EDITOR_WIN
             return "cmd.exe";
-#else
+#elif UNITY_EDITOR_OSX
             return "/bin/zsh";
+#else
+            return "/bin/sh";
 #endif
         }
 
