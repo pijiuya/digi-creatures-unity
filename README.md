@@ -4,7 +4,7 @@
 
 `DigiCreatures Agent` 是一个用于 Unity 的数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、语义物体、NavMesh、自主移动、字幕表达、摄像机和互动动作组合成一套可复用系统，让虚拟生物能在场景中自己选择目标、移动、观察、表达想法并与物体发生互动。
 
-Current version / 当前版本：`0.1.1`
+Current version / 当前版本：`0.1.2`
 
 Unity target / Unity 目标版本：Unity `6.x`，已在 Unity `6.4 (6000.4.7f1)` 上验证。
 
@@ -20,10 +20,14 @@ UPM Git URL:
 https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
 ```
 
+Important: the bare repository URL is not a Unity package because `package.json` lives under `Packages/com.digicreatures.agent`.
+
+注意：裸仓库 URL 不是 Unity package，因为 `package.json` 在 `Packages/com.digicreatures.agent` 子目录下。
+
 Release package / UnityPackage 下载：
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.1
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.2
 ```
 
 ## What It Does / 项目能做什么
@@ -226,12 +230,16 @@ Add package from git URL...
 https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
 ```
 
+Do not use the bare URL `https://github.com/pijiuya/digi-creatures-unity.git` in Package Manager. Unity needs the `?path=/Packages/com.digicreatures.agent` suffix for this repository layout.
+
+不要在 Package Manager 里只填 `https://github.com/pijiuya/digi-creatures-unity.git`。这个仓库是 UPM 子目录包，必须带 `?path=/Packages/com.digicreatures.agent`。
+
 ### Option 2: UnityPackage
 
 Download from release:
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.1
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.2
 ```
 
 Or export from this development project:
@@ -244,7 +252,7 @@ DigiCreatures > Export UnityPackage
 The exporter creates:
 
 ```text
-Builds/DigiCreaturesAgent-0.1.1.unitypackage
+Builds/DigiCreaturesAgent-0.1.2.unitypackage
 ```
 
 ## Required Dependencies / 必需依赖
@@ -432,19 +440,19 @@ The repository `.gitignore` already excludes Unity cache folders, local smoke te
 Latest release:
 
 ```text
-v0.1.1
+v0.1.2
 ```
 
 UnityPackage:
 
 ```text
-DigiCreaturesAgent-0.1.1.unitypackage
+DigiCreaturesAgent-0.1.2.unitypackage
 ```
 
 SHA256:
 
 ```text
-3e0cf7c7ce1fc1e6e8c4a9282d126bb88bce83c7f6a7884ab1596ba5b2a6fa42
+713fd99dfe5aca27e2df6f44f966ea3fe2c24c65567bf57c194de732913562bc
 ```
 
 ## Roadmap / 后续计划

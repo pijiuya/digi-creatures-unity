@@ -2,7 +2,7 @@
 
 `DigiCreatures Agent` 是一个 Unity 数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、NavMesh、语义物体、语义区域、字幕和摄像机逻辑组合成一个可复用系统，让虚拟生物可以在场景中自主选择目标、移动、停留、表达想法并触发简单互动。
 
-当前版本：`0.1.1`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
+当前版本：`0.1.2`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
 
 ## 安装方式
 
@@ -13,6 +13,8 @@
 ```text
 https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
 ```
+
+不要只填 `https://github.com/pijiuya/digi-creatures-unity.git`。这个仓库的 `package.json` 位于 `Packages/com.digicreatures.agent` 子目录，所以 Unity Package Manager 必须使用带 `?path=/Packages/com.digicreatures.agent` 的 URL。
 
 如果仓库是私有仓库，需要先让客户机器具备 GitHub 访问权限。
 
@@ -30,7 +32,7 @@ DigiCreatures > Export UnityPackage
 数字生物 > 高级设置 > 导出 UnityPackage
 ```
 
-导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.1.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
+导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.2.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
 
 ## 依赖
 
