@@ -50,6 +50,12 @@ Release package / UnityPackage 下载：
 https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.8
 ```
 
+Customer handoff materials / 客户交付资料：
+
+- [DigiCreatures Agent 技术流程图](Docs/CustomerHandoff/DigiCreatures_Agent_Technical_Workflow_CN.png)
+- [DigiCreatures Agent 快速开始与深度订制手册 PDF](Docs/CustomerHandoff/DigiCreatures_Agent_QuickStart_CN.pdf)
+- [DigiCreatures 本地 Codex 运行手册](Docs/CustomerHandoff/DigiCreatures_Codex_Runbook_CN.md)
+
 ## What It Does / 项目能做什么
 
 English:
