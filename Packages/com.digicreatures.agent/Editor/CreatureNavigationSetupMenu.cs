@@ -12,7 +12,7 @@ namespace DigiCreaturesEditor
         [MenuItem("数字生物/高级设置/导航/在当前场景安装运行时导航")]
         public static void InstallRuntimeNavigation()
         {
-            CreatureSceneBootstrapper bootstrapper = Object.FindAnyObjectByType<CreatureSceneBootstrapper>();
+            CreatureSceneBootstrapper bootstrapper = CreatureObjectFinder.FindAnyObjectByType<CreatureSceneBootstrapper>(false);
             GameObject host;
 
             if (bootstrapper == null)

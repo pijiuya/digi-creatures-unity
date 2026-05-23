@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using DigiCreatures;
 using Unity.AI.Navigation;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -291,7 +292,7 @@ namespace DigiCreaturesEditor
                 }
             }
 
-            return Object.FindAnyObjectByType<NavMeshSurface>();
+            return CreatureObjectFinder.FindAnyObjectByType<NavMeshSurface>(false);
         }
 
         private static void ConfigureSurfaceForProxy(NavMeshSurface surface, bool bake)

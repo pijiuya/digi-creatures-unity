@@ -10,7 +10,7 @@ namespace DigiCreatures
             if (!includeInactive)
             {
 #pragma warning disable CS0618
-                return Object.FindObjectsByType<T>(FindObjectsSortMode.None);
+                return Object.FindObjectsOfType<T>();
 #pragma warning restore CS0618
             }
 
@@ -31,9 +31,8 @@ namespace DigiCreatures
             if (!includeInactive)
             {
 #pragma warning disable CS0618
-                T[] activeObjects = Object.FindObjectsByType<T>(FindObjectsSortMode.None);
+                return Object.FindObjectOfType<T>();
 #pragma warning restore CS0618
-                return activeObjects.Length > 0 ? activeObjects[0] : null;
             }
 
             foreach (T candidate in Resources.FindObjectsOfTypeAll<T>())

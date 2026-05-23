@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.7
+
+- Lowered the package baseline to Unity `2022.3` while keeping Unity 6 compatibility.
+- Switched object lookup compatibility code to legacy `FindObject(s)OfType` APIs so the package does not depend on Unity 6 object-search overloads.
+- Updated package dependencies to Unity 2022.3-compatible AI Navigation `1.1.5` and Input System `1.7.0`.
+
 ## 0.1.6
 
 - Fixed Unity 6.0 compile errors caused by newer `FindObjectsInactive` object-search overloads that are available in Unity 6.4 but not accepted by Unity 6.0.

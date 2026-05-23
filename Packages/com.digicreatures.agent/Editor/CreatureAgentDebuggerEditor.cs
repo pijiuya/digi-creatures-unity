@@ -18,7 +18,7 @@ namespace DigiCreaturesEditor
             GameObject debuggerObject = new GameObject("智能体调试器");
             Undo.RegisterCreatedObjectUndo(debuggerObject, "创建智能体调试器");
             CreatureAgentDebugger debugger = debuggerObject.AddComponent<CreatureAgentDebugger>();
-            debugger.targetAgent = Object.FindAnyObjectByType<CreatureBrain>();
+            debugger.targetAgent = CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(false);
             Selection.activeObject = debuggerObject;
         }
 

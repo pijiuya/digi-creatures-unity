@@ -116,7 +116,7 @@ namespace DigiCreatures
 
         private void EnsureCreature()
         {
-            if (FindAnyObjectByType<CreatureBrain>() != null)
+            if (CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(false) != null)
             {
                 return;
             }
