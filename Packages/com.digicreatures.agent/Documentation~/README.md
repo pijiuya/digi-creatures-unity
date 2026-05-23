@@ -2,7 +2,7 @@
 
 `DigiCreatures Agent` 是一个 Unity 数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、NavMesh、语义物体、语义区域、字幕和摄像机逻辑组合成一个可复用系统，让虚拟生物可以在场景中自主选择目标、移动、停留、表达想法并触发简单互动。
 
-当前版本：`0.1.2`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
+当前版本：`0.1.3`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`。
 
 ## 安装方式
 
@@ -11,10 +11,14 @@
 在 Unity Package Manager 中选择 `Add package from git URL...`，输入：
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
+https://github.com/pijiuya/digi-creatures-unity.git
 ```
 
-不要只填 `https://github.com/pijiuya/digi-creatures-unity.git`。这个仓库的 `package.json` 位于 `Packages/com.digicreatures.agent` 子目录，所以 Unity Package Manager 必须使用带 `?path=/Packages/com.digicreatures.agent` 的 URL。
+旧的子目录 URL 也继续支持：
+
+```text
+https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
+```
 
 如果仓库是私有仓库，需要先让客户机器具备 GitHub 访问权限。
 
@@ -32,20 +36,27 @@ DigiCreatures > Export UnityPackage
 数字生物 > 高级设置 > 导出 UnityPackage
 ```
 
-导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.2.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
+导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.3.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
+
+`0.1.3` 起，`.unitypackage` 会导入到 `Assets/DigiCreaturesAgent`，并包含独立依赖安装器；导入后会自动尝试安装 AI Navigation、glTFast、Input System、URP 和 UGUI。也可以手动点击：
+
+```text
+数字生物 > 高级设置 > 安装依赖
+```
 
 ## 依赖
 
 必需：
 
 - `com.unity.ai.navigation`
+- `com.unity.cloud.gltfast`
 - `com.unity.inputsystem`
+- `com.unity.render-pipelines.universal`
 - `com.unity.ugui`
 - TextMeshPro，通常随 UGUI 一起可用
 
 推荐：
 
-- `com.unity.cloud.gltfast`：用于导入 GLB/GLTF 模型
 - Ollama：用于本地 OpenAI-compatible Chat Completions
 
 Unity AI Assistant 不是硬依赖；可以作为后续动作生成建议工具使用。

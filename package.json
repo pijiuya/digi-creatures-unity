@@ -18,7 +18,7 @@
     {
       "displayName": "DigiPlace Demo",
       "description": "A complete demo scene showing one LLM-driven creature, semantic objects, NavMesh movement, subtitles, and camera switching.",
-      "path": "Samples~/DigiPlaceDemo"
+      "path": "Packages/com.digicreatures.agent/Samples~/DigiPlaceDemo"
     }
   ]
 }

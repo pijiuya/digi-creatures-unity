@@ -4,7 +4,7 @@
 
 `DigiCreatures Agent` 是一个用于 Unity 的数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、语义物体、NavMesh、自主移动、字幕表达、摄像机和互动动作组合成一套可复用系统，让虚拟生物能在场景中自己选择目标、移动、观察、表达想法并与物体发生互动。
 
-Current version / 当前版本：`0.1.2`
+Current version / 当前版本：`0.1.3`
 
 Unity target / Unity 目标版本：Unity `6.x`，已在 Unity `6.4 (6000.4.7f1)` 上验证。
 
@@ -17,17 +17,23 @@ https://github.com/pijiuya/digi-creatures-unity
 UPM Git URL:
 
 ```text
+https://github.com/pijiuya/digi-creatures-unity.git
+```
+
+Subfolder Git URL, also supported:
+
+```text
 https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
 ```
 
-Important: the bare repository URL is not a Unity package because `package.json` lives under `Packages/com.digicreatures.agent`.
+The root URL is supported from `0.1.3` onward. If a customer already uses the older subfolder URL, it can continue to work.
 
-注意：裸仓库 URL 不是 Unity package，因为 `package.json` 在 `Packages/com.digicreatures.agent` 子目录下。
+从 `0.1.3` 开始，裸仓库 URL 可以直接作为 UPM 包安装。旧的子目录 URL 也继续支持。
 
 Release package / UnityPackage 下载：
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.2
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.3
 ```
 
 ## What It Does / 项目能做什么
@@ -227,19 +233,25 @@ Unity Package Manager:
 
 ```text
 Add package from git URL...
+https://github.com/pijiuya/digi-creatures-unity.git
+```
+
+Older subfolder URL / 旧子目录 URL：
+
+```text
 https://github.com/pijiuya/digi-creatures-unity.git?path=/Packages/com.digicreatures.agent
 ```
 
-Do not use the bare URL `https://github.com/pijiuya/digi-creatures-unity.git` in Package Manager. Unity needs the `?path=/Packages/com.digicreatures.agent` suffix for this repository layout.
+For private repositories, the customer machine must be authenticated with GitHub before Unity Package Manager can clone it.
 
-不要在 Package Manager 里只填 `https://github.com/pijiuya/digi-creatures-unity.git`。这个仓库是 UPM 子目录包，必须带 `?path=/Packages/com.digicreatures.agent`。
+如果仓库是私有仓库，客户电脑必须先完成 GitHub/Git 认证，否则 Unity Package Manager 会显示无法安装。
 
 ### Option 2: UnityPackage
 
 Download from release:
 
 ```text
-https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.2
+https://github.com/pijiuya/digi-creatures-unity/releases/tag/v0.1.3
 ```
 
 Or export from this development project:
@@ -252,19 +264,24 @@ DigiCreatures > Export UnityPackage
 The exporter creates:
 
 ```text
-Builds/DigiCreaturesAgent-0.1.2.unitypackage
+Builds/DigiCreaturesAgent-0.1.3.unitypackage
 ```
+
+The UnityPackage imports to `Assets/DigiCreaturesAgent`. It includes an independent dependency installer that attempts to add AI Navigation, glTFast, Input System, URP, and UGUI automatically.
+
+`.unitypackage` 会导入到 `Assets/DigiCreaturesAgent`，并包含一个独立依赖安装器，会自动尝试安装 AI Navigation、glTFast、Input System、URP 和 UGUI。
 
 ## Required Dependencies / 必需依赖
 
 - `com.unity.ai.navigation`
+- `com.unity.cloud.gltfast`
 - `com.unity.inputsystem`
+- `com.unity.render-pipelines.universal`
 - `com.unity.ugui`
 - TextMeshPro
 
 Recommended / 推荐：
 
-- `com.unity.cloud.gltfast` for GLB/GLTF importing
 - Ollama for local model testing
 
 Unity AI Assistant is optional. It is not a hard dependency.
@@ -440,19 +457,19 @@ The repository `.gitignore` already excludes Unity cache folders, local smoke te
 Latest release:
 
 ```text
-v0.1.2
+v0.1.3
 ```
 
 UnityPackage:
 
 ```text
-DigiCreaturesAgent-0.1.2.unitypackage
+DigiCreaturesAgent-0.1.3.unitypackage
 ```
 
 SHA256:
 
 ```text
-713fd99dfe5aca27e2df6f44f966ea3fe2c24c65567bf57c194de732913562bc
+a40e76669ee4c1749a8d99310f2197e3bc5da068c70e0c9eaa9178938cb287e5
 ```
 
 ## Roadmap / 后续计划

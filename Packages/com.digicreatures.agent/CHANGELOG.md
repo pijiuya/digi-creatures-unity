@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Added a root `package.json` so the bare Git URL can be installed directly from Unity Package Manager.
+- Added a dependency installer assembly that can automatically add AI Navigation, glTFast, Input System, URP, and UGUI when importing the `.unitypackage` into a fresh project.
+- Rebuilt the `.unitypackage` exporter as a stable manual packer. It now preserves original asset GUIDs and writes to `Assets/DigiCreaturesAgent`, avoiding missing prefab/model/script references caused by Unity temporary-copy GUID regeneration.
+
 ## 0.1.2
 
 - Added `数字生物 > 灵魂文件生成器`, an editor tool that expands a short character brief into a full `soul.md` using either an offline template or the currently configured LLM backend.
