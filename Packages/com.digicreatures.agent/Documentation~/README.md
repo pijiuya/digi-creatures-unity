@@ -2,7 +2,7 @@
 
 `DigiCreatures Agent` 是一个 Unity 数字生物智能体插件。它把 LLM、灵魂设定、文件记忆、NavMesh、语义物体、语义区域、字幕和摄像机逻辑组合成一个可复用系统，让虚拟生物可以在场景中自主选择目标、移动、停留、表达想法并触发简单互动。
 
-当前版本：`0.1.5`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`，并针对 Unity `6.0` Windows `.unitypackage` 导入做了兼容处理。
+当前版本：`0.1.6`。已在 Unity `6.4` 项目中验证，目标兼容 Unity `6.x`，并针对 Unity `6.0` Windows `.unitypackage` 导入和编译做了兼容处理。
 
 ## 安装方式
 
@@ -36,7 +36,7 @@ DigiCreatures > Export UnityPackage
 数字生物 > 高级设置 > 导出 UnityPackage
 ```
 
-导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.5.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
+导出文件默认位于 `Builds/DigiCreaturesAgent-<版本号>.unitypackage`，例如 `Builds/DigiCreaturesAgent-0.1.6.unitypackage`。导入客户项目后菜单会出现在 `数字生物` 下。
 
 `0.1.3` 起，`.unitypackage` 会导入到 `Assets/DigiCreaturesAgent`，并包含独立依赖安装器；导入后会自动尝试安装 AI Navigation、glTFast、Input System、URP 和 UGUI。也可以手动点击：
 

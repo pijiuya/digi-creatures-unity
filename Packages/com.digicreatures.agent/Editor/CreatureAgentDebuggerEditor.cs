@@ -110,7 +110,7 @@ namespace DigiCreaturesEditor
                 CreatureMotor motor = agent.GetComponent<CreatureMotor>();
                 EditorGUILayout.LabelField(new GUIContent("移动能力", "CreatureMotor 负责 NavMesh 或直接移动。"), new GUIContent(motor == null ? "未找到 CreatureMotor" : "已挂载 CreatureMotor"));
 
-                CreatureInteractable[] interactables = Object.FindObjectsByType<CreatureInteractable>(FindObjectsInactive.Exclude);
+                CreatureInteractable[] interactables = CreatureObjectFinder.FindObjectsByType<CreatureInteractable>(false);
                 EditorGUILayout.LabelField(new GUIContent("场景可互动对象", "挂载 CreatureInteractable 的对象数量。LLM 会在附近对象中选择 interactionId 和 actionId。"), new GUIContent(interactables.Length.ToString()));
                 foreach (CreatureInteractable interactable in interactables)
                 {

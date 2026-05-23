@@ -33,6 +33,7 @@ namespace DigiCreaturesEditor
         private Vector2 outputScroll;
 
         [MenuItem("数字生物/灵魂文件生成器")]
+        [MenuItem("数字生命/灵魂文件生成器")]
         public static void Open()
         {
             GetWindow<CreatureSoulFileExpanderWindow>("灵魂文件生成器");

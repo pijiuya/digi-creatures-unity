@@ -45,7 +45,7 @@ namespace DigiCreaturesEditor
             int removedTargets = CleanupStaleAutoTargets(candidateObjects);
 
             HashSet<string> usedIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            foreach (CreatureSemanticTarget existing in UnityEngine.Object.FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include))
+            foreach (CreatureSemanticTarget existing in CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(true))
             {
                 if (!string.IsNullOrWhiteSpace(existing.targetId))
                 {
@@ -80,7 +80,7 @@ namespace DigiCreaturesEditor
 
             virtualTargets += EnsureBoundaryTargets(candidates, usedIds, ref markerCount);
 
-            foreach (CreatureSemanticTarget target in UnityEngine.Object.FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include))
+            foreach (CreatureSemanticTarget target in CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(true))
             {
                 if (target != null)
                 {
@@ -111,8 +111,8 @@ namespace DigiCreaturesEditor
         public static string ValidateReachability(bool showDialog)
         {
             List<string> report = new List<string>();
-            CreatureSemanticTarget[] targets = UnityEngine.Object.FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include);
-            CreatureLocationMarker[] markers = UnityEngine.Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include);
+            CreatureSemanticTarget[] targets = CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(true);
+            CreatureLocationMarker[] markers = CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true);
 
             int reachableMarkers = 0;
             int unreachableMarkers = 0;
@@ -158,7 +158,7 @@ namespace DigiCreaturesEditor
         private static List<SemanticCandidate> CollectCandidates()
         {
             List<SemanticCandidate> candidates = new List<SemanticCandidate>();
-            foreach (Renderer renderer in UnityEngine.Object.FindObjectsByType<Renderer>(FindObjectsInactive.Exclude))
+            foreach (Renderer renderer in CreatureObjectFinder.FindObjectsByType<Renderer>(false))
             {
                 if (renderer == null || renderer.gameObject == null || ShouldIgnore(renderer.gameObject))
                 {
@@ -227,7 +227,7 @@ namespace DigiCreaturesEditor
         private static int CleanupStaleAutoTargets(HashSet<GameObject> candidateObjects)
         {
             int removed = 0;
-            CreatureSemanticTarget[] existingTargets = UnityEngine.Object.FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include);
+            CreatureSemanticTarget[] existingTargets = CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(true);
             foreach (CreatureSemanticTarget target in existingTargets)
             {
                 if (target == null ||
@@ -238,7 +238,7 @@ namespace DigiCreaturesEditor
                     continue;
                 }
 
-                foreach (CreatureLocationMarker marker in UnityEngine.Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include))
+                foreach (CreatureLocationMarker marker in CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true))
                 {
                     if (marker == null ||
                         !marker.isSemanticGenerated ||
@@ -341,7 +341,7 @@ namespace DigiCreaturesEditor
 
         private static CreatureSemanticTarget FindSemanticTarget(string targetId)
         {
-            foreach (CreatureSemanticTarget target in UnityEngine.Object.FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include))
+            foreach (CreatureSemanticTarget target in CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(true))
             {
                 if (target != null && string.Equals(target.targetId, targetId, StringComparison.OrdinalIgnoreCase))
                 {
@@ -488,7 +488,7 @@ namespace DigiCreaturesEditor
 
         private static CreatureLocationMarker FindMarker(string id)
         {
-            foreach (CreatureLocationMarker marker in UnityEngine.Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include))
+            foreach (CreatureLocationMarker marker in CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true))
             {
                 if (marker != null && string.Equals(marker.id, id, StringComparison.OrdinalIgnoreCase))
                 {

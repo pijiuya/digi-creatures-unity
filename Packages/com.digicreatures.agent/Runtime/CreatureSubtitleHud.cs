@@ -64,7 +64,7 @@ namespace DigiCreatures
                 return instance;
             }
 
-            CreatureSubtitleHud existing = FindAnyObjectByType<CreatureSubtitleHud>(FindObjectsInactive.Include);
+            CreatureSubtitleHud existing = CreatureObjectFinder.FindAnyObjectByType<CreatureSubtitleHud>(true);
             if (existing != null)
             {
                 instance = existing;

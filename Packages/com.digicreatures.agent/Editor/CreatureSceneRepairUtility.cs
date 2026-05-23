@@ -24,27 +24,27 @@ namespace DigiCreaturesEditor
             int cleanedObjects = 0;
             int removedComponents = 0;
 
-            foreach (CreatureBrain brain in Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include))
+            foreach (CreatureBrain brain in CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true))
             {
                 AddOwner(owners, brain);
             }
 
-            foreach (CreatureMotor motor in Object.FindObjectsByType<CreatureMotor>(FindObjectsInactive.Include))
+            foreach (CreatureMotor motor in CreatureObjectFinder.FindObjectsByType<CreatureMotor>(true))
             {
                 AddOwner(owners, motor);
             }
 
-            foreach (CreatureSpeechBubble bubble in Object.FindObjectsByType<CreatureSpeechBubble>(FindObjectsInactive.Include))
+            foreach (CreatureSpeechBubble bubble in CreatureObjectFinder.FindObjectsByType<CreatureSpeechBubble>(true))
             {
                 AddOwner(owners, bubble);
             }
 
-            foreach (CreatureIdleMotion idleMotion in Object.FindObjectsByType<CreatureIdleMotion>(FindObjectsInactive.Include))
+            foreach (CreatureIdleMotion idleMotion in CreatureObjectFinder.FindObjectsByType<CreatureIdleMotion>(true))
             {
                 AddOwner(owners, idleMotion);
             }
 
-            foreach (NavMeshAgent navMeshAgent in Object.FindObjectsByType<NavMeshAgent>(FindObjectsInactive.Include))
+            foreach (NavMeshAgent navMeshAgent in CreatureObjectFinder.FindObjectsByType<NavMeshAgent>(true))
             {
                 AddOwner(owners, navMeshAgent);
             }
@@ -60,7 +60,7 @@ namespace DigiCreaturesEditor
                 report.Add($"已从“{owner.name}”移除智能体大脑、移动器、待机动作、旧对话气泡和 NavMeshAgent。");
             }
 
-            foreach (CreatureAgentDebugger debugger in Object.FindObjectsByType<CreatureAgentDebugger>(FindObjectsInactive.Include))
+            foreach (CreatureAgentDebugger debugger in CreatureObjectFinder.FindObjectsByType<CreatureAgentDebugger>(true))
             {
                 if (debugger == null || debugger.targetAgent == null)
                 {
@@ -120,6 +120,7 @@ namespace DigiCreaturesEditor
         }
 
         [MenuItem("数字生物/确保数字生物在场景中")]
+        [MenuItem("数字生命/确保数字生命在场景中")]
         public static void EnsureCreatureAgentInScene()
         {
             List<string> report = new List<string>();
@@ -177,7 +178,7 @@ namespace DigiCreaturesEditor
                 report.Add($"当前选中对象“{selected.name}”像地图/场景网格，已跳过，避免把地图误设为智能体。");
             }
 
-            brain = Object.FindAnyObjectByType<CreatureBrain>(FindObjectsInactive.Include);
+            brain = CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(true);
             if (brain != null)
             {
                 report.Add($"未选中对象，使用场景中已有智能体：{brain.name}");
@@ -218,7 +219,7 @@ namespace DigiCreaturesEditor
 
         private static GameObject FindExistingCreatureRoot()
         {
-            foreach (CreatureBrain brain in Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include))
+            foreach (CreatureBrain brain in CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true))
             {
                 if (brain != null && IsCreatureLike(brain.gameObject))
                 {
@@ -287,7 +288,7 @@ namespace DigiCreaturesEditor
         private static void PlaceAtNavMeshStart(Transform agent, List<string> report)
         {
             Vector3 preferred = Vector3.zero;
-            CreatureLocationMarker origin = Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include)
+            CreatureLocationMarker origin = CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true)
                 .FirstOrDefault(marker => marker != null && string.Equals(marker.id, "origin", System.StringComparison.OrdinalIgnoreCase));
             if (origin != null)
             {
@@ -404,7 +405,7 @@ namespace DigiCreaturesEditor
 
         private static void DisableRuntimeCreatureSpawn(List<string> report)
         {
-            CreatureSceneBootstrapper bootstrapper = Object.FindAnyObjectByType<CreatureSceneBootstrapper>(FindObjectsInactive.Include);
+            CreatureSceneBootstrapper bootstrapper = CreatureObjectFinder.FindAnyObjectByType<CreatureSceneBootstrapper>(true);
             if (bootstrapper == null)
             {
                 return;
@@ -444,7 +445,7 @@ namespace DigiCreaturesEditor
             Camera camera = Camera.main;
             if (camera == null)
             {
-                camera = Object.FindAnyObjectByType<Camera>(FindObjectsInactive.Include);
+                camera = CreatureObjectFinder.FindAnyObjectByType<Camera>(true);
             }
 
             if (camera == null)
@@ -570,7 +571,7 @@ namespace DigiCreaturesEditor
         private static void EnsureSingleAutonomousBrain(CreatureBrain activeBrain, List<string> report)
         {
             int disabled = 0;
-            foreach (CreatureBrain otherBrain in Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include))
+            foreach (CreatureBrain otherBrain in CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true))
             {
                 if (otherBrain == null || otherBrain == activeBrain || !otherBrain.StartOnAwake)
                 {
@@ -613,11 +614,11 @@ namespace DigiCreaturesEditor
 
         private static void EnsureLocationMarkers(Vector3 center, List<string> report)
         {
-            int before = Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include).Length;
+            int before = CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true).Length;
             EnsureLocation("origin", "原点", "spawn,neutral", 3, center, "智能体可以回到的中心位置。", report);
             EnsureLocation("north", "北侧探索点", "explore", 1, center + new Vector3(0f, 0f, 6f), "北侧的可移动探索点。", report);
             EnsureLocation("east", "东侧探索点", "explore", 1, center + new Vector3(6f, 0f, 0f), "东侧的可移动探索点。", report);
-            int after = Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include).Length;
+            int after = CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true).Length;
 
             if (after == before)
             {
@@ -634,7 +635,7 @@ namespace DigiCreaturesEditor
             string description,
             List<string> report)
         {
-            foreach (CreatureLocationMarker existingMarker in Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Include))
+            foreach (CreatureLocationMarker existingMarker in CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(true))
             {
                 if (string.Equals(existingMarker.id, id, System.StringComparison.OrdinalIgnoreCase))
                 {
@@ -664,7 +665,7 @@ namespace DigiCreaturesEditor
         private static void EnsureDebugger(CreatureBrain brain, List<string> report)
         {
             CreatureAgentDebugger debugger = null;
-            foreach (CreatureAgentDebugger candidate in Object.FindObjectsByType<CreatureAgentDebugger>(FindObjectsInactive.Include))
+            foreach (CreatureAgentDebugger candidate in CreatureObjectFinder.FindObjectsByType<CreatureAgentDebugger>(true))
             {
                 debugger = candidate;
                 if (candidate.targetAgent == brain)
@@ -689,7 +690,7 @@ namespace DigiCreaturesEditor
 
         private static void EnsureSceneInteractables(List<string> report)
         {
-            CreatureInteractable[] existing = Object.FindObjectsByType<CreatureInteractable>(FindObjectsInactive.Include);
+            CreatureInteractable[] existing = CreatureObjectFinder.FindObjectsByType<CreatureInteractable>(true);
             if (existing.Length >= 3)
             {
                 report.Add($"已确认场景中有 {existing.Length} 个可互动对象。");
@@ -697,8 +698,8 @@ namespace DigiCreaturesEditor
             }
 
             int added = 0;
-            IEnumerable<CreatureSemanticTarget> candidates = Object
-                .FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Include)
+            IEnumerable<CreatureSemanticTarget> candidates = CreatureObjectFinder
+                .FindObjectsByType<CreatureSemanticTarget>(true)
                 .Where(target => target != null &&
                                  target.navigationKind != CreatureNavigationKind.Blocked &&
                                  target.navigationKind != CreatureNavigationKind.InteractOnly)

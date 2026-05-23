@@ -318,7 +318,7 @@ namespace DigiCreatures
                 return runtimeTarget;
             }
 
-            CreatureBrain brain = FindAnyObjectByType<CreatureBrain>(FindObjectsInactive.Exclude);
+            CreatureBrain brain = CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(false);
             return brain == null ? null : brain.transform;
         }
 
@@ -758,7 +758,7 @@ namespace DigiCreatures
                 return activeRig;
             }
 
-            CreatureCameraRig rig = FindAnyObjectByType<CreatureCameraRig>(FindObjectsInactive.Exclude);
+            CreatureCameraRig rig = CreatureObjectFinder.FindAnyObjectByType<CreatureCameraRig>(false);
             if (rig != null)
             {
                 activeRig = rig;
@@ -768,7 +768,7 @@ namespace DigiCreatures
             Camera mainCamera = Camera.main;
             if (mainCamera == null)
             {
-                mainCamera = FindAnyObjectByType<Camera>(FindObjectsInactive.Exclude);
+                mainCamera = CreatureObjectFinder.FindAnyObjectByType<Camera>(false);
             }
 
             if (mainCamera == null || !Application.isPlaying)

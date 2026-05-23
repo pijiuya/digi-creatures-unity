@@ -87,7 +87,7 @@ namespace DigiCreaturesEditor
 
         private static void EnsureDefaultLocation(string id, string displayName, string tags, int priority, Vector3 position, string description)
         {
-            foreach (CreatureLocationMarker marker in Object.FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Exclude))
+            foreach (CreatureLocationMarker marker in CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(false))
             {
                 if (marker.id == id)
                 {

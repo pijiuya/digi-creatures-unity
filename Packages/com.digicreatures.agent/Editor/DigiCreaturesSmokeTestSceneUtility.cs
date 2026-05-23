@@ -195,7 +195,9 @@ namespace DigiCreaturesEditor
             ground.name = "Smoke Walkable Plane";
             ground.transform.localScale = new Vector3(2f, 1f, 2f);
             ApplyMaterial(ground, "SmokeGround", new Color(0.72f, 0.74f, 0.76f));
+#pragma warning disable CS0618
             GameObjectUtility.SetStaticEditorFlags(ground, StaticEditorFlags.NavigationStatic);
+#pragma warning restore CS0618
 
             GameObject navRoot = new GameObject("DigiCreatures_Smoke_NavMeshSurface");
             NavMeshSurface surface = navRoot.AddComponent<NavMeshSurface>();
@@ -419,7 +421,7 @@ namespace DigiCreaturesEditor
                 return;
             }
 
-            CreatureBrain brain = UnityEngine.Object.FindAnyObjectByType<CreatureBrain>(FindObjectsInactive.Exclude);
+            CreatureBrain brain = CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(false);
             NavMeshAgent agent = brain == null ? null : brain.GetComponent<NavMeshAgent>();
             Vector3 position = brain == null ? Vector3.zero : brain.transform.position;
             float moved = brain == null ? 0f : Vector3.Distance(position, new Vector3(-4f, 0f, -4f));

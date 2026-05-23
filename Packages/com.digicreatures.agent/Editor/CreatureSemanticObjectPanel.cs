@@ -16,9 +16,10 @@ namespace DigiCreaturesEditor
         private bool includeInactive;
 
         [MenuItem("数字生物/语义物体面板")]
+        [MenuItem("数字生命/语义物体面板")]
         public static void Open()
         {
-            CreatureSemanticObjectPanel window = GetWindow<CreatureSemanticObjectPanel>("语义物体");
+            CreatureSemanticObjectPanel window = GetWindow<CreatureSemanticObjectPanel>("数字生命语义物体");
             window.RefreshRows();
         }
 
@@ -170,7 +171,7 @@ namespace DigiCreaturesEditor
         private void RefreshRows()
         {
             rows.Clear();
-            foreach (Renderer renderer in FindObjectsByType<Renderer>(includeInactive ? FindObjectsInactive.Include : FindObjectsInactive.Exclude))
+            foreach (Renderer renderer in CreatureObjectFinder.FindObjectsByType<Renderer>(includeInactive))
             {
                 if (renderer == null || ShouldIgnore(renderer.gameObject) || renderer.bounds.size.sqrMagnitude < 0.05f)
                 {

@@ -675,7 +675,7 @@ namespace DigiCreatures
 
         private CreatureSemanticTarget[] FindSemanticTargets()
         {
-            return FindObjectsByType<CreatureSemanticTarget>(FindObjectsInactive.Exclude)
+            return CreatureObjectFinder.FindObjectsByType<CreatureSemanticTarget>(false)
                 .Where(target => target != null && target.isActiveAndEnabled)
                 .OrderByDescending(target => Mathf.Max(1, target.interestWeight))
                 .ThenBy(target => Vector3.Distance(transform.position, target.transform.position))
@@ -685,7 +685,7 @@ namespace DigiCreatures
 
         private CreatureSemanticRegion[] FindSemanticRegions()
         {
-            return FindObjectsByType<CreatureSemanticRegion>(FindObjectsInactive.Exclude)
+            return CreatureObjectFinder.FindObjectsByType<CreatureSemanticRegion>(false)
                 .Where(region => region != null && region.isActiveAndEnabled)
                 .OrderByDescending(region => Mathf.Max(1, region.priority))
                 .ThenBy(region => Vector3.Distance(transform.position, region.transform.position))
@@ -695,7 +695,7 @@ namespace DigiCreatures
 
         private CreatureInteractable[] FindNearbyInteractables()
         {
-            return FindObjectsByType<CreatureInteractable>(FindObjectsInactive.Exclude)
+            return CreatureObjectFinder.FindObjectsByType<CreatureInteractable>(false)
                 .Where(interactable => interactable != null &&
                                        Vector3.Distance(transform.position, interactable.transform.position) <=
                                        Mathf.Max(interactionScanRadius, interactable.interactionRadius))
@@ -704,7 +704,7 @@ namespace DigiCreatures
 
         private void RefreshPerception()
         {
-            locations = FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Exclude);
+            locations = CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(false);
             interactables = FindNearbyInteractables();
             semanticTargets = FindSemanticTargets();
             regions = FindSemanticRegions();
@@ -947,7 +947,7 @@ namespace DigiCreatures
 
         private CreatureInteractable ResolveInteractable(CreatureDecision decision)
         {
-            CreatureInteractable[] all = FindObjectsByType<CreatureInteractable>(FindObjectsInactive.Exclude)
+            CreatureInteractable[] all = CreatureObjectFinder.FindObjectsByType<CreatureInteractable>(false)
                 .Where(candidate => candidate != null && candidate.isActiveAndEnabled)
                 .ToArray();
             if (all.Length == 0)

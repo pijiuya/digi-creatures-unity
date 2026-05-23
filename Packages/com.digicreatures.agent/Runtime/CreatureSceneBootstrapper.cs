@@ -73,7 +73,7 @@ namespace DigiCreatures
         private static void EnsureLocation(string id, string displayName, string tags, int priority, Vector3 position, string description)
         {
             CreatureLocationMarker existing = null;
-            foreach (CreatureLocationMarker candidate in FindObjectsByType<CreatureLocationMarker>(FindObjectsInactive.Exclude))
+            foreach (CreatureLocationMarker candidate in CreatureObjectFinder.FindObjectsByType<CreatureLocationMarker>(false))
             {
                 if (candidate.id == id)
                 {

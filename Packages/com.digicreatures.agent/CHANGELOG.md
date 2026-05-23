@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6
+
+- Fixed Unity 6.0 compile errors caused by newer `FindObjectsInactive` object-search overloads that are available in Unity 6.4 but not accepted by Unity 6.0.
+- Added a compatibility object finder used by runtime and editor tools.
+- Declared required Unity built-in modules such as Animation, AI, Physics, JSON serialization, ScreenCapture, UI, and UnityWebRequest so minimal Unity 6 projects can compile the package.
+- Added `数字生命` menu aliases for the main daily entry points while keeping the existing `数字生物` menu.
+
 ## 0.1.5
 
 - Rebuilt the `.unitypackage` format for Windows Unity 6.0 compatibility by avoiding PAX tar headers and exporting sample asset paths with ASCII-only names.

@@ -55,9 +55,10 @@ namespace DigiCreaturesEditor
         };
 
         [MenuItem("数字生物/模型管理")]
+        [MenuItem("数字生命/模型管理")]
         public static void Open()
         {
-            GetWindow<CreatureAgentConsoleWindow>("模型管理");
+            GetWindow<CreatureAgentConsoleWindow>("数字生命模型管理");
         }
 
         [MenuItem("数字生物/高级设置/智能体控制台")]
@@ -92,7 +93,7 @@ namespace DigiCreaturesEditor
 
         private void OnEnable()
         {
-            titleContent = new GUIContent("模型管理");
+            titleContent = new GUIContent("数字生命模型管理");
             settings = LoadOrCreateSettings();
             remoteApiKeyInput = EditorPrefs.GetString(RemoteApiKeyPrefsKey, string.Empty);
             if (settings != null)
@@ -499,7 +500,7 @@ namespace DigiCreaturesEditor
         private void ApplySettingsToSceneAgents()
         {
             int count = 0;
-            foreach (CreatureBrain brain in FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include))
+            foreach (CreatureBrain brain in CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true))
             {
                 Undo.RecordObject(brain, "应用智能体模型配置");
                 brain.LlmSettings = settings;
@@ -547,7 +548,7 @@ namespace DigiCreaturesEditor
                 : Selection.activeGameObject.GetComponentInParent<CreatureBrain>();
             CreatureBrain brain = selectedBrain != null
                 ? selectedBrain
-                : FindAnyObjectByType<CreatureBrain>(FindObjectsInactive.Include);
+                : CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(true);
             if (brain != null && !string.IsNullOrWhiteSpace(brain.CreatureDataPath))
             {
                 return Path.Combine(brain.CreatureDataPath, "config.json").Replace("\\", "/");

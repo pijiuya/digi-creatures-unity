@@ -10,9 +10,10 @@ namespace DigiCreaturesEditor
         private Vector2 scroll;
 
         [MenuItem("数字生物/决策监控")]
+        [MenuItem("数字生命/决策监控")]
         public static void Open()
         {
-            GetWindow<CreatureAgentMonitorWindow>("数字生物决策监控");
+            GetWindow<CreatureAgentMonitorWindow>("数字生命决策监控");
         }
 
         private void OnEnable()
@@ -50,7 +51,7 @@ namespace DigiCreaturesEditor
 
         private void DrawCurrentAgent()
         {
-            CreatureBrain brain = Object.FindAnyObjectByType<CreatureBrain>(FindObjectsInactive.Include);
+            CreatureBrain brain = CreatureObjectFinder.FindAnyObjectByType<CreatureBrain>(true);
             if (brain == null)
             {
                 EditorGUILayout.HelpBox("当前场景没有找到 CreatureBrain。请先运行“数字生物/确保数字生物在场景中”。", MessageType.Info);

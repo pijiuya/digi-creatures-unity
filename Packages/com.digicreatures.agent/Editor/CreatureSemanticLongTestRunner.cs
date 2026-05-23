@@ -64,7 +64,7 @@ namespace DigiCreaturesEditor
             }
 
             string semanticReport = CreatureSemanticSceneUtility.ScanAndGenerateTargets(false);
-            CreatureBrain[] brains = UnityEngine.Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include);
+            CreatureBrain[] brains = CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true);
             if (brains.Length == 0)
             {
                 EditorUtility.DisplayDialog("长时间 LLM 测试", "场景中没有 CreatureBrain。请先运行“场景验证与修复”。", "确定");
@@ -106,7 +106,7 @@ namespace DigiCreaturesEditor
             }
 
             string semanticReport = CreatureSemanticSceneUtility.ScanAndGenerateTargets(false);
-            CreatureBrain[] brains = UnityEngine.Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include);
+            CreatureBrain[] brains = CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true);
             if (brains.Length == 0)
             {
                 EditorUtility.DisplayDialog("本地 LLM 视觉长测", "场景中没有 CreatureBrain。请先运行“确保数字生物在场景中”。", "确定");
@@ -203,7 +203,7 @@ namespace DigiCreaturesEditor
             SessionState.SetBool(RunningKey, false);
             SessionState.SetBool(VisualModeKey, false);
 
-            CreatureBrain[] brains = UnityEngine.Object.FindObjectsByType<CreatureBrain>(FindObjectsInactive.Include);
+            CreatureBrain[] brains = CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true);
             string outputRoot = SessionState.GetString(OutputRootKey, string.Empty);
             string root = visualMode && !string.IsNullOrWhiteSpace(outputRoot)
                 ? Path.Combine(outputRoot, "CreatureData")
