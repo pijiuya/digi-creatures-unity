@@ -156,6 +156,14 @@ subtitleName: 暗黑大统领
 
 字幕名字和 prompt 名称优先读取 `soul.md` 的 `subtitleName/displayName`，其次读取 `CreatureProfile`，最后使用 GameObject 名。把角色改成“暗黑大统领”后，字幕不会强制显示 demo 里的星海机器人名字。
 
+如果客户只写了几句粗略设定，可以打开：
+
+```text
+数字生物 > 灵魂文件生成器
+```
+
+这个工具可以把简单设定扩展成完整 `soul.md`。它支持离线模板生成，也可以调用“模型管理”中当前配置的本地或线上 LLM；生成结果会先显示在预览区，确认后再保存，不会自动覆盖已有文件。
+
 ## 语义物体
 
 打开：
@@ -209,7 +217,7 @@ Demo 场景包含已配置的 `NavMeshSurface`。客户项目中建议：
 
 ## 摄像机和字幕
 
-字幕使用包内 `NotoSansSC-Regular` 字体，Windows/macOS 都可显示中文。字幕分两行：
+字幕使用包内 `NotoSansSC-Regular` 字体，Windows/macOS/Linux 都可显示中文。字幕分两行：
 
 - 第一行：`dialogue`，角色说出口的话
 - 第二行：`intent`，内心想法

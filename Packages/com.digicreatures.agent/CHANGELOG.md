@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added `数字生物 > 灵魂文件生成器`, an editor tool that expands a short character brief into a full `soul.md` using either an offline template or the currently configured LLM backend.
+- Improved Linux custom command portability by using `/bin/sh` instead of assuming `/bin/zsh`.
+
 ## 0.1.1
 
 - Added a minimal smoke test scene generator and 60-second local Play Mode smoke test under `数字生物 > 高级设置 > 测试`.

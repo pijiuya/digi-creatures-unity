@@ -138,6 +138,10 @@ subtitleName: 暗黑大统领
 你来自……
 ```
 
+The editor also includes `数字生物 > 灵魂文件生成器`. Customers can write a short character brief, expand it into a complete `soul.md` with an offline template or the currently configured LLM, preview it, and save it into `Assets/DigiCreaturesData/<creature>`.
+
+编辑器提供 `数字生物 > 灵魂文件生成器`。客户只需要写几句简单角色设定，就可以用离线模板或当前配置的 LLM 扩展成完整 `soul.md`，预览确认后保存到 `Assets/DigiCreaturesData/<角色目录>`。
+
 ### Semantic Objects And Regions / 语义物体与语义区域
 
 The LLM never receives arbitrary coordinates. It sees curated semantic IDs:
@@ -203,13 +207,13 @@ API Key 不会序列化进项目资产。Runtime 优先读取 `OPENAI_API_KEY` �
 - Space can toggle third-person view.
 - If fixed view cannot see the agent, runtime can switch to third-person or a movement framing camera.
 - Subtitles show two channels: spoken `dialogue` and private `intent`.
-- A bundled Noto Sans SC font is used for Chinese subtitle readability on macOS and Windows.
+- A bundled Noto Sans SC font is used for Chinese subtitle readability on macOS, Windows, and Linux.
 
 - 固定机位可见时优先使用固定机位。
 - 空格键可以切换第三人称。
 - 固定机位看不到 agent 时，可切换第三人称或运动全景镜头。
 - 字幕分两行显示：说出口的 `dialogue` 和内心想法 `intent`。
-- 随包提供 Noto Sans SC 字体，方便 macOS/Windows 显示中文。
+- 随包提供 Noto Sans SC 字体，方便 macOS/Windows/Linux 显示中文。
 
 ## Installation / 安装
 
@@ -344,6 +348,7 @@ Daily-use menus / 日常菜单：
 
 ```text
 数字生物 > 模型管理
+数字生物 > 灵魂文件生成器
 数字生物 > 语义物体面板
 数字生物 > 决策监控
 数字生物 > 确保数字生物在场景中
