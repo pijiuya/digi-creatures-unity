@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Fixed an editor compile error in `DigiCreaturesPackageExporter` caused by `CompressionLevel` resolving ambiguously between `System.IO.Compression` and `UnityEngine` after package import.
+
 ## 0.1.3
 
 - Added a root `package.json` so the bare Git URL can be installed directly from Unity Package Manager.

@@ -109,7 +109,7 @@ namespace DigiCreaturesEditor
             }
 
             using FileStream fileStream = File.Create(exportPath);
-            using GZipStream gzipStream = new GZipStream(fileStream, CompressionLevel.Optimal);
+            using GZipStream gzipStream = new GZipStream(fileStream, System.IO.Compression.CompressionLevel.Optimal);
             foreach (PackageAsset asset in assets.OrderBy(asset => asset.PackagePath, StringComparer.OrdinalIgnoreCase))
             {
                 string entryRoot = asset.Guid;
