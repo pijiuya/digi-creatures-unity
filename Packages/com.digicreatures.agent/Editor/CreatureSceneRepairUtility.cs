@@ -99,7 +99,7 @@ namespace DigiCreaturesEditor
             CreatureLlmSettings settings = CreatureAgentConsoleWindow.LoadOrCreateSettings();
             CreatureBrain brain = ResolveTargetBrain(report);
             EnsureAgentComponents(brain.gameObject, brain, settings, report);
-            EnsureSingleAutonomousBrain(brain, report);
+            ReportMultiAgentStartupState(report);
             EnsureAgentOnNavMesh(brain.transform, report);
             EnsureLocationMarkers(brain.transform.position, report);
             string semanticReport = CreatureSemanticSceneUtility.ScanAndGenerateTargets(false);
@@ -127,7 +127,7 @@ namespace DigiCreaturesEditor
             CreatureLlmSettings settings = CreatureAgentConsoleWindow.LoadOrCreateSettings();
             CreatureBrain brain = CreateOrFindCreatureAgent(report);
             EnsureAgentComponents(brain.gameObject, brain, settings, report);
-            EnsureSingleAutonomousBrain(brain, report);
+            ReportMultiAgentStartupState(report);
             EnsureAgentOnNavMesh(brain.transform, report);
             EnsureLocationMarkers(brain.transform.position, report);
             EnsureSceneInteractables(report);
@@ -144,6 +144,23 @@ namespace DigiCreaturesEditor
             string message = string.Join("\n", report);
             Debug.Log("数字生物智能体场景安装完成：\n" + message, brain);
             EditorUtility.DisplayDialog("数字生物智能体", message, "确定");
+        }
+
+        [MenuItem("数字生物/高级设置/多智能体/只保留选中智能体自动启动")]
+        public static void KeepOnlySelectedBrainAutonomous()
+        {
+            List<string> report = new List<string>();
+            CreatureBrain brain = ResolveTargetBrain(report);
+            EnsureSingleAutonomousBrain(brain, report);
+
+            if (!Application.isPlaying)
+            {
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+            }
+
+            string message = string.Join("\n", report);
+            Debug.Log("单智能体自动启动配置完成：\n" + message, brain);
+            EditorUtility.DisplayDialog("单智能体自动启动", message, "确定");
         }
 
         [MenuItem("数字生物/DigiPlace Demo/安装 Timmy 示例")]
@@ -587,6 +604,17 @@ namespace DigiCreaturesEditor
             if (disabled > 0)
             {
                 report.Add($"已将另外 {disabled} 个 CreatureBrain 设为不自动启动，避免多个智能体同时请求同一模型和记忆。");
+            }
+        }
+
+        private static void ReportMultiAgentStartupState(List<string> report)
+        {
+            int autonomousBrains = CreatureObjectFinder.FindObjectsByType<CreatureBrain>(true)
+                .Count(brain => brain != null && brain.StartOnAwake);
+
+            if (autonomousBrains > 1)
+            {
+                report.Add($"已保留 {autonomousBrains} 个自动启动智能体；多智能体场景不会默认关闭其它 CreatureBrain。");
             }
         }
 

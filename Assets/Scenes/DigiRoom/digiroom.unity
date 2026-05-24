@@ -1,0 +1,3076 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 2
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 112000000, guid: 0032242d23a4e4849b0d2a53798ad3eb, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: aabf653a1ed6a41328219328ec13ca81, type: 2}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &18259643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18259645}
+  - component: {fileID: 18259644}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_\u5E73\u9762_base"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &18259644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18259643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: "\u5E73\u9762_base"
+  displayName: "\u5E73\u9762 \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u5E73\u9762\u201D\u3002"
+  tags: "walkable,\u5E73\u9762"
+  priority: 1
+  semanticTargetId: "\u5E73\u9762"
+  navigationKind: 0
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &18259645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18259643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0059580803, z: -1.5313628}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &67174790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5931372751300003811, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 805098333363774982, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 805098333363774982, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 919132149155446097, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_Name
+      value: stru
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654934372253022927, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015415391883453526, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015415391883453526, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015415391883453526, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -5931372751300003811, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2136935103}
+    - targetCorrespondingSourceObject: {fileID: -5931372751300003811, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2136935102}
+    - targetCorrespondingSourceObject: {fileID: 3654934372253022927, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998020264}
+  m_SourcePrefab: {fileID: 100100000, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+--- !u!1 &115610142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115610144}
+  - component: {fileID: 115610143}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_001_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &115610143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115610142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_001_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.001
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.001\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_001
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_001
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &115610144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115610142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.854126, y: -0.34037924, z: -0.9616003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &147762855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8259293580864827044, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &147762857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147762855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_056
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.056"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_056
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 3.2235558
+  linkedMarkers:
+  - {fileID: 605720096}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &153432336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153432340}
+  - component: {fileID: 153432339}
+  - component: {fileID: 153432338}
+  - component: {fileID: 153432337}
+  - component: {fileID: 153432342}
+  - component: {fileID: 153432341}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 1
+  m_IsActive: 1
+--- !u!65 &153432337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &153432338
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &153432339
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &153432340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15.79, z: 0}
+  m_LocalScale: {x: 17.943, y: 1, z: 12.763}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153432341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad12b72c9c424ff28fba844bdb0c1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureInteractable
+  interactionId: platform_cube_0_0
+  displayName: "\u5E73\u53F0\uFF1A\u5E73\u53F0/\u5730\u9762 Cube"
+  description: "\u53EF\u4EE5\u7AD9\u7ACB\u3001\u9760\u8FD1\u6216\u4F5C\u4E3A\u8DEF\u5F84\u8282\u70B9\u7684\u5E73\u53F0\u3002"
+  tags: platform,cube
+  interactionRadius: 8
+  actions:
+  - actionId: inspect
+    actionType: 3
+    enabled: 1
+    prefabToSpawn: {fileID: 0}
+    spawnPoint: {fileID: 0}
+    moveTarget: {fileID: 0}
+    moveOffset: {x: 0, y: 1, z: 0}
+    animationClip: {fileID: 0}
+    jumpHeight: 0.6
+    jumpDuration: 0.55
+    customEvent:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &153432342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153432336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: platform_cube_0_0
+  displayName: "\u5E73\u53F0\uFF1A\u5E73\u53F0/\u5730\u9762 Cube"
+  description: "\u53EF\u4EE5\u7AD9\u7ACB\u3001\u9760\u8FD1\u6216\u4F5C\u4E3A\u8DEF\u5F84\u8282\u70B9\u7684\u5E73\u53F0\u3002"
+  semanticTags: platform,cube
+  navigationKind: 4
+  dangerLevel: 0
+  interestWeight: 3
+  approachRadius: 8
+  linkedMarkers:
+  - {fileID: 883095636}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &232842222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232842224}
+  - component: {fileID: 232842223}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &232842223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232842222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &232842224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232842222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.69, y: -0.29404163, z: -0.96160126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &256275570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3972717256313027454, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &256275572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256275570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_066
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.066"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_066
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 7.600855
+  linkedMarkers:
+  - {fileID: 1081700051}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &291778428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414575397787727262, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &291778430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291778428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_059
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.059"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_059
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 7.691324
+  linkedMarkers:
+  - {fileID: 651188001}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &298596827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298596829}
+  - component: {fileID: 298596828}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_067_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &298596828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298596827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_067_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.067
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.067\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_067
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_067
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &298596829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298596827}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.4053, y: 2.7392914, z: -3.2314243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &327235516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327235518}
+  - component: {fileID: 327235517}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_blocked_\u7ACB\u65B9\u4F53_0_-5_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327235517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327235516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: "blocked_\u7ACB\u65B9\u4F53_0_-5_viewpoint"
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1A\u56F4\u5899/\u8FB9\u754C \u7ACB\u65B9\u4F53
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1A\u56F4\u5899/\u8FB9\u754C
+    \u7ACB\u65B9\u4F53\u201D\u3002"
+  tags: "blocked,\u7ACB\u65B9\u4F53"
+  priority: 1
+  semanticTargetId: "blocked_\u7ACB\u65B9\u4F53_0_-5"
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &327235518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327235516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21311593, y: 0.0059580803, z: -5.4657607}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &458381144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458381146}
+  - component: {fileID: 458381145}
+  m_Layer: 0
+  m_Name: "\u667A\u80FD\u4F53\u8C03\u8BD5\u5668"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &458381145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458381144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12e7ffc52b9047be87c4c13183ae38f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureAgentDebugger
+  targetAgent: {fileID: 1293865096}
+--- !u!4 &458381146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458381144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &494892563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494892565}
+  - component: {fileID: 494892564}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_029_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &494892564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494892563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_029_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.029
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.029\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_029
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_029
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &494892565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494892563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.216843, y: 15.544861, z: -8.067138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &496473950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496473952}
+  - component: {fileID: 496473951}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_046_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &496473951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496473950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_046_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.046
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.046\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_046
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_046
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &496473952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496473950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.854128, y: -0.29404163, z: -5.966932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &605720095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 605720097}
+  - component: {fileID: 605720096}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_056_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &605720096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605720095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_056_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.056
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.056\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_056
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_056
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &605720097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605720095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.55337, y: -0.17123842, z: -4.5390396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &651188000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651188002}
+  - component: {fileID: 651188001}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_059_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651188001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651188000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_059_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.059
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.059\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_059
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_059
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &651188002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651188000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.391014, y: 2.7392914, z: -4.4773607}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &653367398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4950769544759893546, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &653367400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653367398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_028
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.028"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_028
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 6.291544
+  linkedMarkers:
+  - {fileID: 1052537336}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &661146826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661146828}
+  - component: {fileID: 661146827}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_037_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &661146827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661146826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_037_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.037
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.037\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_037
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_037
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &661146828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661146826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.854128, y: 6.0059586, z: -7.755653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &669684039 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+  m_PrefabInstance: {fileID: 1033940836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &690620631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8773542310234346903, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &690620633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690620631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_029
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.029"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_029
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 6.291544
+  linkedMarkers:
+  - {fileID: 494892564}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &699259941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699259943}
+  - component: {fileID: 699259942}
+  m_Layer: 0
+  m_Name: "\u667A\u80FD\u4F53\u79FB\u52A8\u70B9_east"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &699259942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699259941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: east
+  displayName: "\u4E1C\u4FA7\u63A2\u7D22\u70B9"
+  description: "\u4E1C\u4FA7\u7684\u53EF\u79FB\u52A8\u63A2\u7D22\u70B9\u3002"
+  tags: explore
+  priority: 1
+  semanticTargetId: 
+  navigationKind: 0
+  navAreaName: Walkable
+  isSemanticGenerated: 0
+--- !u!4 &699259943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699259941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.9958043, y: 0.0059580803, z: -3.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &883095635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883095637}
+  - component: {fileID: 883095636}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_platform_cube_0_0_platform"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &883095636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883095635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: platform_cube_0_0_platform
+  displayName: "\u5E73\u53F0\uFF1A\u5E73\u53F0/\u5730\u9762 Cube \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u5E73\u53F0\uFF1A\u5E73\u53F0/\u5730\u9762
+    Cube\u201D\u3002"
+  tags: platform,cube
+  priority: 3
+  semanticTargetId: platform_cube_0_0
+  navigationKind: 4
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &883095637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883095635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 16.30596, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &998020262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3654934372253022927, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+  m_PrefabInstance: {fileID: 67174790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &998020264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998020262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: "blocked_\u7ACB\u65B9\u4F53_0_-5"
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1A\u56F4\u5899/\u8FB9\u754C \u7ACB\u65B9\u4F53"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: "blocked,\u7ACB\u65B9\u4F53"
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 6.022073
+  linkedMarkers:
+  - {fileID: 327235517}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1025897497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025897499}
+  - component: {fileID: 1025897498}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_wall_east_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025897498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025897497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: wall_east_viewpoint
+  displayName: "\u4E1C\u4FA7\u56F4\u5899/\u8FB9\u754C \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u4E1C\u4FA7\u56F4\u5899/\u8FB9\u754C\u201D\u3002"
+  tags: "blocked,wall,boundary,\u89C2\u5BDF,\u4E0D\u53EF\u7A7F\u8D8A"
+  priority: 2
+  semanticTargetId: wall_east
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1025897499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025897497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.14936, y: 9.587489, z: -0.96160126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1033940836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1758452243}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5835.691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5835.691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5835.691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0041959
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7168351
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.69724274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -88.412
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f85692db140624ef9a060802235cf4a1, type: 2}
+    - target: {fileID: 919132149155446097, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+      propertyPath: m_Name
+      value: "Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_0524080006_texture"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f716f941834e46a89b381bfdf03b2ee, type: 3}
+--- !u!1 &1052537335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052537337}
+  - component: {fileID: 1052537336}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_028_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1052537336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052537335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_028_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.028
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.028\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_028
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_028
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1052537337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052537335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.491411, y: 15.543941, z: -8.067138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1081700050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081700052}
+  - component: {fileID: 1081700051}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_066_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1081700051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081700050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_066_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.066
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.066\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_066
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_066
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1081700052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081700050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.881445, y: 5.3592763, z: -5.6902614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1094749914
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1293865099}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.509
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.509
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.509
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.7019997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.1062
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: m_Name
+      value: "Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_biped_Animation_Walking_withSkin"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111781155169087978, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d60e0a1918dc84f258906a36bd093aee, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1147830446}
+  m_SourcePrefab: {fileID: 100100000, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+--- !u!4 &1094749915 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+  m_PrefabInstance: {fileID: 1094749914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105766982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105766985}
+  - component: {fileID: 1105766984}
+  - component: {fileID: 1105766983}
+  - component: {fileID: 1105766986}
+  - component: {fileID: 1105766987}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1105766983
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105766982}
+  m_Enabled: 1
+--- !u!20 &1105766984
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105766982}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1105766985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105766982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.27045923, y: 0, z: 0, w: 0.9627314}
+  m_LocalPosition: {x: -0.0041959, y: 7.52, z: -13.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.35, z: 0}
+--- !u!114 &1105766986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105766982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!114 &1105766987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105766982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f5c87b1d8de41cfb9d4797347661e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureCameraRig
+  target: {fileID: 1094749915}
+  targetCamera: {fileID: 1105766984}
+  cameraMode: 0
+  enableMovementFraming: 1
+  movementFrameChanceWhenFixedHidden: 0.3
+  movementShotMinDistance: 2.4
+  movementShotMaxDistance: 36
+  movementShotMargin: 1.28
+  movementShotHeightPadding: 1.8
+  fixedReturnPadding: 0.08
+  useFixedCameraOcclusionCheck: 1
+  fixedCameraOcclusionLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  fixedCameraRequiredVisibleRayRatio: 0.25
+  occlusionRaycastSkin: 0.08
+  allowManualThirdPersonToggle: 1
+  manualThirdPersonToggleKey: 1
+  thirdPersonOffset: {x: 0, y: 3.2, z: -6.5}
+  thirdPersonYawOffsetDegrees: 0
+  lookAtHeight: 1.35
+  positionDamping: 7
+  rotationDamping: 10
+--- !u!1 &1147830445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fee853772e87f4d7283995126c7207a3, type: 3}
+  m_PrefabInstance: {fileID: 1094749914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1147830446
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147830445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3064ba2a9be549a3bb1afb8c23da023, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1252153446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252153448}
+  - component: {fileID: 1252153447}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_wall_west_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1252153447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252153446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: wall_west_viewpoint
+  displayName: "\u897F\u4FA7\u56F4\u5899/\u8FB9\u754C \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u897F\u4FA7\u56F4\u5899/\u8FB9\u754C\u201D\u3002"
+  tags: "blocked,wall,boundary,\u89C2\u5BDF,\u4E0D\u53EF\u7A7F\u8D8A"
+  priority: 2
+  semanticTargetId: wall_west
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1252153448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252153446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.230639, y: 9.587489, z: -0.96160126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1279708102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279708104}
+  - component: {fileID: 1279708103}
+  m_Layer: 0
+  m_Name: "\u667A\u80FD\u4F53\u79FB\u52A8\u70B9_north"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1279708103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279708102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: north
+  displayName: "\u5317\u4FA7\u63A2\u7D22\u70B9"
+  description: "\u5317\u4FA7\u7684\u53EF\u79FB\u52A8\u63A2\u7D22\u70B9\u3002"
+  tags: explore
+  priority: 1
+  semanticTargetId: 
+  navigationKind: 0
+  navAreaName: Walkable
+  isSemanticGenerated: 0
+--- !u!4 &1279708104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279708102}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0041959286, y: 0.0059580803, z: 2.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1293865095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293865099}
+  - component: {fileID: 1293865098}
+  - component: {fileID: 1293865097}
+  - component: {fileID: 1293865096}
+  - component: {fileID: 1293865100}
+  m_Layer: 0
+  m_Name: agent2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1293865096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293865095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727f0ee6d6c740f384a80b9f1b22c4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureBrain
+  profile: {fileID: 0}
+  creatureDataPath: 
+  llmSettings: {fileID: 11400000, guid: 6166f5bcbd50142eca9e205e94a3050c, type: 2}
+  startOnAwake: 1
+  agentMode: 0
+  interactionScanRadius: 5
+  interactionExecutionGrace: 2.5
+  decisionIntervalSeconds: 2.5
+  maximumDwellSeconds: 4
+  minimumSubtitleVisibleSeconds: 8
+  subtitleExtraVisibleSeconds: 3
+  wanderRadius: 8
+  preferObjectsOverFixedMarkers: 1
+  localReactionsWhileThinking: 1
+  currentIntent: 
+  lastDialogue: 
+  lastDecisionError: 
+  lastDestinationId: 
+  lastTargetId: 
+  lastRegionId: 
+  lastTargetInterest: 
+  lastActivity: 
+  lastStatus: 
+  lastLlmLatencyMs: 0
+  useTestMemory: 0
+  testMemoryFileName: test-memory.jsonl
+  recordLlmMetrics: 0
+--- !u!114 &1293865097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293865095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bcf17546c54dd2801881bc09cb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureMotor
+  agent: {fileID: 1293865098}
+  animator: {fileID: 1147830446}
+  visualRoot: {fileID: 1094749915}
+  visualYawOffsetDegrees: 0
+  walkSpeed: 1.8
+  runSpeed: 3.8
+  arriveDistance: 0.35
+  directMoveTurnSpeed: 8
+  maxMoveSeconds: 24
+  stuckTimeoutSeconds: 4
+--- !u!195 &1293865098
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293865095}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 0.35
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!4 &1293865099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293865095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.504, y: -0.41, z: 3.9074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1094749915}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293865100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293865095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78137c60c669045abb11cf8f137a1a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureIdleMotion
+  animator: {fileID: 1147830446}
+  idleClipName: Armature|Armature|walking_man|baselayer
+  idleClipPath: "Assets/Digimon/Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_biped
+    2/Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_biped_Animation_Walking_withSkin.fbx"
+  thinkingClipName: Armature|Armature|walking_man|baselayer
+  thinkingClipPath: "Assets/Digimon/Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_biped
+    2/Meshy_AI_\u9EC4\u8272\u7684\u6050\u9F99\u578B\u865A_biped_Animation_Walking_withSkin.fbx"
+  controllerStateName: Agent Model Locomotion
+  nativeAnimationNote: FBX/GLB locomotion uses the imported looping clip. Speed and
+    MotionSpeed are kept for controller compatibility.
+  forceIdleParameters: 1
+  thinkingBlendSpeed: 0.45
+  thinkingMotionSpeed: 0.55
+--- !u!1 &1347348806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347348808}
+  - component: {fileID: 1347348807}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_wall_south_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1347348807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347348806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: wall_south_viewpoint
+  displayName: "\u5357\u4FA7\u56F4\u5899/\u8FB9\u754C \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u5357\u4FA7\u56F4\u5899/\u8FB9\u754C\u201D\u3002"
+  tags: "blocked,wall,boundary,\u89C2\u5BDF,\u4E0D\u53EF\u7A7F\u8D8A"
+  priority: 2
+  semanticTargetId: wall_south
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1347348808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347348806}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.69, y: 5.4509716, z: -6.6716022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1416380267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6227759102399861341, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1416380269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416380267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_031
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.031"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_031
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 6.3203893
+  linkedMarkers:
+  - {fileID: 1837991559}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1486547413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1570719278482501811, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486547415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486547413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_046
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.046"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_046
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 7.4523315
+  linkedMarkers:
+  - {fileID: 496473951}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1504681088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1504681090}
+  - component: {fileID: 1504681089}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_wall_north_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1504681089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504681088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: wall_north_viewpoint
+  displayName: "\u5317\u4FA7\u56F4\u5899/\u8FB9\u754C \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u5317\u4FA7\u56F4\u5899/\u8FB9\u754C\u201D\u3002"
+  tags: "blocked,wall,boundary,\u89C2\u5BDF,\u4E0D\u53EF\u7A7F\u8D8A"
+  priority: 2
+  semanticTargetId: wall_north
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1504681090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504681088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.69, y: 9.587489, z: 4.7483993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1574123163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3739343349832680677, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574123165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574123163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_001
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.001"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_001
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 8
+  linkedMarkers:
+  - {fileID: 115610143}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1625372045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1625372047}
+  - component: {fileID: 1625372046}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1625372046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625372045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.18666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: a68eb2921c2c647fea130e0d57d4dbb8, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1625372047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625372045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.84811, y: 6.1292, z: -4.67129}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1682174800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8860335456985159685, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1682174802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682174800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_037
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.037"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_037
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 8
+  linkedMarkers:
+  - {fileID: 661146827}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1758452239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1758452243}
+  - component: {fileID: 1758452242}
+  - component: {fileID: 1758452241}
+  - component: {fileID: 1758452240}
+  m_Layer: 0
+  m_Name: agentAgent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1758452240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758452239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727f0ee6d6c740f384a80b9f1b22c4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureBrain
+  profile: {fileID: 0}
+  creatureDataPath: 
+  llmSettings: {fileID: 11400000, guid: 6166f5bcbd50142eca9e205e94a3050c, type: 2}
+  startOnAwake: 1
+  agentMode: 0
+  interactionScanRadius: 5
+  interactionExecutionGrace: 2.5
+  decisionIntervalSeconds: 2.5
+  maximumDwellSeconds: 4
+  minimumSubtitleVisibleSeconds: 8
+  subtitleExtraVisibleSeconds: 3
+  wanderRadius: 8
+  preferObjectsOverFixedMarkers: 1
+  localReactionsWhileThinking: 1
+  currentIntent: 
+  lastDialogue: 
+  lastDecisionError: 
+  lastDestinationId: 
+  lastTargetId: 
+  lastRegionId: 
+  lastTargetInterest: 
+  lastActivity: 
+  lastStatus: 
+  lastLlmLatencyMs: 0
+  useTestMemory: 0
+  testMemoryFileName: test-memory.jsonl
+  recordLlmMetrics: 0
+--- !u!114 &1758452241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758452239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bcf17546c54dd2801881bc09cb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureMotor
+  agent: {fileID: 0}
+  animator: {fileID: 0}
+  visualRoot: {fileID: 0}
+  visualYawOffsetDegrees: 0
+  walkSpeed: 1.8
+  runSpeed: 3.8
+  arriveDistance: 0.35
+  directMoveTurnSpeed: 8
+  maxMoveSeconds: 24
+  stuckTimeoutSeconds: 4
+--- !u!195 &1758452242
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758452239}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!4 &1758452243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758452239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 669684039}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1760681261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 863595678043934971, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1760681263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760681261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 8
+  linkedMarkers:
+  - {fileID: 232842223}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1 &1779713202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779713204}
+  - component: {fileID: 1779713203}
+  m_Layer: 0
+  m_Name: "\u667A\u80FD\u4F53\u79FB\u52A8\u70B9_origin"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1779713203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779713202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: origin
+  displayName: "\u539F\u70B9"
+  description: "\u667A\u80FD\u4F53\u53EF\u4EE5\u56DE\u5230\u7684\u4E2D\u5FC3\u4F4D\u7F6E\u3002"
+  tags: spawn,neutral
+  priority: 3
+  semanticTargetId: 
+  navigationKind: 0
+  navAreaName: Walkable
+  isSemanticGenerated: 0
+--- !u!4 &1779713204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779713202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0041959286, y: 0.0059580803, z: -3.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837991558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837991560}
+  - component: {fileID: 1837991559}
+  m_Layer: 0
+  m_Name: "\u8BED\u4E49\u79FB\u52A8\u70B9_floor_baseboard_across_back_wall_031_viewpoint"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1837991559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837991558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d17d32820e4c88b3405ed84e6c7baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureLocationMarker
+  id: floor_baseboard_across_back_wall_031_viewpoint
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.031
+    \u63A5\u8FD1\u70B9"
+  description: "\u7528\u4E8E\u63A5\u8FD1\u6216\u89C2\u5BDF\u201C\u8FB9\u754C/\u56F4\u5899\uFF1Afloor
+    baseboard across back wall.031\u201D\u3002"
+  tags: blocked,floor_baseboard_across_back_wall_031
+  priority: 1
+  semanticTargetId: floor_baseboard_across_back_wall_031
+  navigationKind: 2
+  navAreaName: Walkable
+  isSemanticGenerated: 1
+--- !u!4 &1837991560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837991558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.854128, y: 6.0059586, z: -7.7957444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2073927283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073927285}
+  - component: {fileID: 2073927284}
+  - component: {fileID: 2073927286}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2073927284
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073927283}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &2073927285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073927283}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2073927286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073927283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!1 &2094373433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7669268776749320540, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+  m_PrefabInstance: {fileID: 2127305737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094373435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094373433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: floor_baseboard_across_back_wall_067
+  displayName: "\u8FB9\u754C/\u56F4\u5899\uFF1Afloor baseboard across back wall.067"
+  description: "\u963B\u6321\u6216\u56F4\u5408\u573A\u666F\u7684\u8FB9\u754C\uFF0C\u9002\u5408\u4ECE\u9644\u8FD1\u89C2\u5BDF\u4F46\u4E0D\u80FD\u76F4\u63A5\u7A7F\u8D8A\u3002"
+  semanticTags: blocked,floor_baseboard_across_back_wall_067
+  navigationKind: 2
+  dangerLevel: 2
+  interestWeight: 1
+  approachRadius: 2.8212414
+  linkedMarkers:
+  - {fileID: 298596828}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1001 &2127305737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8925340165956322894, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8925340165956322894, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: -8925340165956322894, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: -8773542310234346903, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4672
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4672
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4672
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.69
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8259293580864827044, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7942316526535390173, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7669268776749320540, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6227759102399861341, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4950769544759893546, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3739343349832680677, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3164781631518192319, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3164781631518192319, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: -2677993136038771536, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1700010054321874943, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1700010054321874943, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: -385436722928553051, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -186208517517253308, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -186208517517253308, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 321252560143997251, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 863595678043934971, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_Name
+      value: window_room_simple_scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171461094591452821, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171461094591452821, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 1171461094591452821, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 1570719278482501811, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258683533818560333, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972717256313027454, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386174603022295856, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386174603022295856, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 4386174603022295856, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 4414575397787727262, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883373714806881805, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883373714806881805, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 5883373714806881805, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 5883373714806881805, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bc105aad9b8c410f8855434be36c426, type: 2}
+    - target: {fileID: 8860335456985159685, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 863595678043934971, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1760681263}
+    - targetCorrespondingSourceObject: {fileID: -3739343349832680677, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1574123165}
+    - targetCorrespondingSourceObject: {fileID: -4950769544759893546, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 653367400}
+    - targetCorrespondingSourceObject: {fileID: -8773542310234346903, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 690620633}
+    - targetCorrespondingSourceObject: {fileID: -6227759102399861341, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1416380269}
+    - targetCorrespondingSourceObject: {fileID: 8860335456985159685, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1682174802}
+    - targetCorrespondingSourceObject: {fileID: 1570719278482501811, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1486547415}
+    - targetCorrespondingSourceObject: {fileID: -8259293580864827044, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 147762857}
+    - targetCorrespondingSourceObject: {fileID: 4414575397787727262, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 291778430}
+    - targetCorrespondingSourceObject: {fileID: 3972717256313027454, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 256275572}
+    - targetCorrespondingSourceObject: {fileID: -7669268776749320540, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2094373435}
+  m_SourcePrefab: {fileID: 100100000, guid: 562f6fdc4c3384d3cbb4360ca26b200b, type: 3}
+--- !u!1 &2136935100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5931372751300003811, guid: 1666a726f8d7c45659906424f92ca0ed, type: 3}
+  m_PrefabInstance: {fileID: 67174790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2136935102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136935100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad12b72c9c424ff28fba844bdb0c1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureInteractable
+  interactionId: "\u5E73\u9762"
+  displayName: "\u5E73\u9762"
+  description: "\u4ECE\u573A\u666F\u5BF9\u8C61\u540D\u79F0\u81EA\u52A8\u751F\u6210\u7684\u53EF\u63A2\u7D22\u76EE\u6807\u3002"
+  tags: "walkable,\u5E73\u9762"
+  interactionRadius: 8
+  actions:
+  - actionId: inspect
+    actionType: 3
+    enabled: 1
+    prefabToSpawn: {fileID: 0}
+    spawnPoint: {fileID: 0}
+    moveTarget: {fileID: 0}
+    moveOffset: {x: 0, y: 1, z: 0}
+    animationClip: {fileID: 0}
+    jumpHeight: 0.6
+    jumpDuration: 0.55
+    customEvent:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &2136935103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136935100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3149e1d16a2964bf9b4b80e028115e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DigiCreatures.Runtime::DigiCreatures.CreatureSemanticTarget
+  targetId: "\u5E73\u9762"
+  displayName: "\u5E73\u9762"
+  description: "\u4ECE\u573A\u666F\u5BF9\u8C61\u540D\u79F0\u81EA\u52A8\u751F\u6210\u7684\u53EF\u63A2\u7D22\u76EE\u6807\u3002"
+  semanticTags: "walkable,\u5E73\u9762"
+  navigationKind: 0
+  dangerLevel: 0
+  interestWeight: 1
+  approachRadius: 8
+  linkedMarkers:
+  - {fileID: 18259644}
+  isAutoGenerated: 1
+  selectedCount: 0
+  lastInterestReason: 
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1105766985}
+  - {fileID: 2073927285}
+  - {fileID: 67174790}
+  - {fileID: 153432340}
+  - {fileID: 2127305737}
+  - {fileID: 1625372047}
+  - {fileID: 1779713204}
+  - {fileID: 1279708104}
+  - {fileID: 699259943}
+  - {fileID: 232842224}
+  - {fileID: 115610144}
+  - {fileID: 661146828}
+  - {fileID: 651188002}
+  - {fileID: 1081700052}
+  - {fileID: 496473952}
+  - {fileID: 1837991560}
+  - {fileID: 494892565}
+  - {fileID: 1052537337}
+  - {fileID: 605720097}
+  - {fileID: 298596829}
+  - {fileID: 883095637}
+  - {fileID: 327235518}
+  - {fileID: 18259645}
+  - {fileID: 1504681090}
+  - {fileID: 1347348808}
+  - {fileID: 1025897499}
+  - {fileID: 1252153448}
+  - {fileID: 458381146}
+  - {fileID: 1758452243}
+  - {fileID: 1293865099}

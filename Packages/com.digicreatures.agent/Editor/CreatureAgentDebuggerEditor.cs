@@ -84,10 +84,12 @@ namespace DigiCreaturesEditor
                     }
                 }
 
-                string fullPath = ResolveProjectPath(Path.Combine(agent.CreatureDataPath, "soul.md"));
+                string dataPath = ResolveCreatureDataPath(agent);
+                string soulPath = Path.Combine(dataPath, "soul.md").Replace("\\", "/");
+                string fullPath = ResolveProjectPath(soulPath);
                 if (File.Exists(fullPath))
                 {
-                    EditorGUILayout.LabelField(new GUIContent("当前文件", "当前智能体实际读取的灵魂文本路径。"), new GUIContent(Path.Combine(agent.CreatureDataPath, "soul.md")));
+                    EditorGUILayout.LabelField(new GUIContent("当前文件", "当前智能体实际读取的灵魂文本路径。"), new GUIContent(soulPath));
                     EditorGUILayout.TextArea(File.ReadAllText(fullPath), GUILayout.MinHeight(110f));
                 }
                 else
@@ -137,7 +139,7 @@ namespace DigiCreaturesEditor
                 return;
             }
 
-            string destinationAssetPath = Path.Combine(agent.CreatureDataPath, "soul.md").Replace("\\", "/");
+            string destinationAssetPath = Path.Combine(ResolveCreatureDataPath(agent), "soul.md").Replace("\\", "/");
             Directory.CreateDirectory(Path.GetDirectoryName(destinationAssetPath));
             File.Copy(sourcePath, destinationAssetPath, true);
             AssetDatabase.ImportAsset(destinationAssetPath);
@@ -146,7 +148,7 @@ namespace DigiCreaturesEditor
 
         private static void CreateNewSoul(CreatureBrain agent)
         {
-            string destinationAssetPath = Path.Combine(agent.CreatureDataPath, "soul.md").Replace("\\", "/");
+            string destinationAssetPath = Path.Combine(ResolveCreatureDataPath(agent), "soul.md").Replace("\\", "/");
             Directory.CreateDirectory(Path.GetDirectoryName(destinationAssetPath));
             if (!File.Exists(destinationAssetPath))
             {
@@ -156,6 +158,17 @@ namespace DigiCreaturesEditor
             AssetDatabase.ImportAsset(destinationAssetPath);
             AssetDatabase.Refresh();
             Selection.activeObject = AssetDatabase.LoadAssetAtPath<TextAsset>(destinationAssetPath);
+        }
+
+        private static string ResolveCreatureDataPath(CreatureBrain agent)
+        {
+            if (!string.IsNullOrWhiteSpace(agent.CreatureDataPath))
+            {
+                return agent.CreatureDataPath;
+            }
+
+            string folderName = agent.Profile == null ? CreatureProfile.SanitizePathSegment(agent.gameObject.name) : agent.Profile.DataFolderName;
+            return Path.Combine("Assets", "DigiCreaturesData", folderName).Replace("\\", "/");
         }
 
         private static string ResolveProjectPath(string path)

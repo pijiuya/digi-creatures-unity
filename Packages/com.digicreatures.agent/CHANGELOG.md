@@ -2,6 +2,10 @@
 
 ## 0.1.8
 
+- Added multi-agent model animation tooling for DigiRoom so each CreatureBrain can bind a distinct FBX/GLB model root, Animator, Avatar, and generated locomotion controller without overwriting other agents.
+- Updated scene repair behavior to preserve multiple autonomous CreatureBrain instances by default, with a separate menu action for single-agent startup mode.
+- Made Animator parameter writes tolerant of model-specific controllers and ensured imported single-clip locomotion animations loop without being frozen by a zero MotionSpeed parameter.
+- Added a DigiRoom multi-agent unitypackage export that includes the agent package plus the scene, model assets, and generated controller closure.
 - Removed an unused hard reference to Cinemachine from the DigiPlace demo `RespawnPlayer` sample script so imported `.unitypackage` demos compile in projects that do not have Cinemachine installed.
 - Renamed the sample third-person camera target field away from Cinemachine terminology while preserving existing serialized demo references.
 - Made `.unitypackage` dependency installation safer by compiling the lightweight installer before the main runtime/editor assemblies when required packages are missing, and removed URP from the auto-install list.

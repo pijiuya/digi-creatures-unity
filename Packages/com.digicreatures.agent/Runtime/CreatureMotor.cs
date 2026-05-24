@@ -27,6 +27,9 @@ namespace DigiCreatures
         private float directSpeed;
         private Quaternion visualBaseLocalRotation = Quaternion.identity;
         private bool hasVisualBaseRotation;
+        private bool hasSpeedParameter;
+        private bool hasGroundedParameter;
+        private bool hasMotionSpeedParameter;
 
         public bool IsMoving { get; private set; }
         public bool LastMoveSucceeded { get; private set; }
@@ -37,6 +40,7 @@ namespace DigiCreatures
             agent = agent != null ? agent : GetComponent<NavMeshAgent>();
             animator = animator != null ? animator : GetComponentInChildren<Animator>();
             visualRoot = visualRoot != null ? visualRoot : animator == null ? null : animator.transform;
+            CacheAnimatorParameters();
             CacheVisualBaseRotation();
             agent.updateRotation = true;
             agent.stoppingDistance = arriveDistance;
@@ -236,9 +240,48 @@ namespace DigiCreatures
                 return;
             }
 
-            animator.SetBool(GroundedId, true);
-            animator.SetFloat(SpeedId, speed);
-            animator.SetFloat(MotionSpeedId, speed > 0.05f ? 1f : 0f);
+            if (hasGroundedParameter)
+            {
+                animator.SetBool(GroundedId, true);
+            }
+
+            if (hasSpeedParameter)
+            {
+                animator.SetFloat(SpeedId, speed);
+            }
+
+            if (hasMotionSpeedParameter)
+            {
+                animator.SetFloat(MotionSpeedId, speed > 0.05f ? 1f : 0f);
+            }
+        }
+
+        private void CacheAnimatorParameters()
+        {
+            hasSpeedParameter = false;
+            hasGroundedParameter = false;
+            hasMotionSpeedParameter = false;
+
+            if (animator == null || animator.runtimeAnimatorController == null)
+            {
+                return;
+            }
+
+            foreach (AnimatorControllerParameter parameter in animator.parameters)
+            {
+                if (parameter.nameHash == SpeedId && parameter.type == AnimatorControllerParameterType.Float)
+                {
+                    hasSpeedParameter = true;
+                }
+                else if (parameter.nameHash == GroundedId && parameter.type == AnimatorControllerParameterType.Bool)
+                {
+                    hasGroundedParameter = true;
+                }
+                else if (parameter.nameHash == MotionSpeedId && parameter.type == AnimatorControllerParameterType.Float)
+                {
+                    hasMotionSpeedParameter = true;
+                }
+            }
         }
 
         private void CacheVisualBaseRotation()

@@ -20,6 +20,9 @@ namespace DigiCreatures
         private static readonly int GroundedId = Animator.StringToHash("Grounded");
         private static readonly int MotionSpeedId = Animator.StringToHash("MotionSpeed");
         private string activity = "idle";
+        private bool hasSpeedParameter;
+        private bool hasGroundedParameter;
+        private bool hasMotionSpeedParameter;
 
         public string IdleClipName => idleClipName;
         public string IdleClipPath => idleClipPath;
@@ -31,6 +34,7 @@ namespace DigiCreatures
         private void Awake()
         {
             animator = animator != null ? animator : GetComponentInChildren<Animator>(true);
+            CacheAnimatorParameters();
         }
 
         private void LateUpdate()
@@ -75,9 +79,20 @@ namespace DigiCreatures
                 return;
             }
 
-            animator.SetBool(GroundedId, true);
-            animator.SetFloat(SpeedId, 0f);
-            animator.SetFloat(MotionSpeedId, 0f);
+            if (hasGroundedParameter)
+            {
+                animator.SetBool(GroundedId, true);
+            }
+
+            if (hasSpeedParameter)
+            {
+                animator.SetFloat(SpeedId, 0f);
+            }
+
+            if (hasMotionSpeedParameter)
+            {
+                animator.SetFloat(MotionSpeedId, 0f);
+            }
         }
 
         private void ApplyThinkingParameters()
@@ -87,9 +102,48 @@ namespace DigiCreatures
                 return;
             }
 
-            animator.SetBool(GroundedId, true);
-            animator.SetFloat(SpeedId, Mathf.Max(0.05f, thinkingBlendSpeed));
-            animator.SetFloat(MotionSpeedId, Mathf.Max(0.05f, thinkingMotionSpeed));
+            if (hasGroundedParameter)
+            {
+                animator.SetBool(GroundedId, true);
+            }
+
+            if (hasSpeedParameter)
+            {
+                animator.SetFloat(SpeedId, Mathf.Max(0.05f, thinkingBlendSpeed));
+            }
+
+            if (hasMotionSpeedParameter)
+            {
+                animator.SetFloat(MotionSpeedId, Mathf.Max(0.05f, thinkingMotionSpeed));
+            }
+        }
+
+        private void CacheAnimatorParameters()
+        {
+            hasSpeedParameter = false;
+            hasGroundedParameter = false;
+            hasMotionSpeedParameter = false;
+
+            if (animator == null || animator.runtimeAnimatorController == null)
+            {
+                return;
+            }
+
+            foreach (AnimatorControllerParameter parameter in animator.parameters)
+            {
+                if (parameter.nameHash == SpeedId && parameter.type == AnimatorControllerParameterType.Float)
+                {
+                    hasSpeedParameter = true;
+                }
+                else if (parameter.nameHash == GroundedId && parameter.type == AnimatorControllerParameterType.Bool)
+                {
+                    hasGroundedParameter = true;
+                }
+                else if (parameter.nameHash == MotionSpeedId && parameter.type == AnimatorControllerParameterType.Float)
+                {
+                    hasMotionSpeedParameter = true;
+                }
+            }
         }
 
         private static bool IsThinkingActivity(string currentActivity)
