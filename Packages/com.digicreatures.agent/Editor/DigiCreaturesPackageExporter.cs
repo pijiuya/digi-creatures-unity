@@ -17,6 +17,12 @@ namespace DigiCreaturesEditor
         private const string PackageRoot = "Packages/com.digicreatures.agent";
         private const string ExportFolder = "Builds";
         private const string UnityPackageRoot = "Assets/DigiCreaturesAgent";
+        private static readonly string[] DigiRoomAssetRoots =
+        {
+            "Assets/Scenes/DigiRoom",
+            "Assets/Digimon",
+            "Assets/DigiCreatures/Generated"
+        };
 
         [MenuItem("DigiCreatures/Export UnityPackage")]
         [MenuItem("数字生物/高级设置/导出 UnityPackage")]
@@ -40,6 +46,28 @@ namespace DigiCreaturesEditor
             WriteUnityPackage(exportPath, assets);
             Debug.Log($"DigiCreatures stable unitypackage exported to {exportPath}. Assets={assets.Count}; root={UnityPackageRoot}");
             EditorUtility.DisplayDialog("DigiCreatures Export", $"已导出：\n{exportPath}\n\n此版本使用稳定 GUID 打包，不再依赖临时 Assets 目录。", "确定");
+        }
+
+        [MenuItem("数字生物/高级设置/导出 DigiRoom 多智能体 UnityPackage")]
+        public static void ExportDigiRoomUnityPackage()
+        {
+            if (!Directory.Exists(PackageRoot))
+            {
+                EditorUtility.DisplayDialog("DigiRoom Export", "没有找到 Packages/com.digicreatures.agent。", "确定");
+                return;
+            }
+
+            Directory.CreateDirectory(ExportFolder);
+            string exportPath = Path.GetFullPath(Path.Combine(ExportFolder, $"DigiCreaturesAgent-DigiRoom-{GetPackageVersion()}.unitypackage")).Replace("\\", "/");
+            List<PackageAsset> assets = CollectPackageAssets()
+                .Concat(CollectProjectAssets(DigiRoomAssetRoots))
+                .GroupBy(asset => asset.Guid)
+                .Select(group => group.First())
+                .ToList();
+
+            WriteUnityPackage(exportPath, assets);
+            Debug.Log($"DigiRoom multi-agent unitypackage exported to {exportPath}. Assets={assets.Count}");
+            EditorUtility.DisplayDialog("DigiRoom Export", $"已导出：\n{exportPath}\n\n包含 DigiCreatures 包代码、DigiRoom 场景、模型和生成的多智能体 AnimatorController。", "确定");
         }
 
         private static IEnumerable<PackageAsset> CollectPackageAssets()
@@ -84,6 +112,43 @@ namespace DigiCreaturesEditor
             return !normalized.Contains("/memory.jsonl", StringComparison.OrdinalIgnoreCase) &&
                    !normalized.Contains("/test-memory.jsonl", StringComparison.OrdinalIgnoreCase) &&
                    !normalized.Contains("/llm-long-test-report", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static IEnumerable<PackageAsset> CollectProjectAssets(IEnumerable<string> assetRoots)
+        {
+            foreach (string assetRoot in assetRoots)
+            {
+                string fullRoot = Path.GetFullPath(assetRoot);
+                if (!Directory.Exists(fullRoot))
+                {
+                    Debug.LogWarning("DigiRoom export skipped missing folder: " + assetRoot);
+                    continue;
+                }
+
+                foreach (string assetPath in Directory.GetFiles(fullRoot, "*", SearchOption.AllDirectories))
+                {
+                    if (!ShouldIncludeAsset(assetPath))
+                    {
+                        continue;
+                    }
+
+                    string metaPath = assetPath + ".meta";
+                    if (!File.Exists(metaPath))
+                    {
+                        Debug.LogWarning("DigiRoom export skipped file without meta: " + ToProjectRelativePath(assetPath));
+                        continue;
+                    }
+
+                    string projectPath = ToProjectRelativePath(assetPath).Replace("\\", "/");
+                    string guid = ReadGuid(metaPath);
+                    if (string.IsNullOrWhiteSpace(guid))
+                    {
+                        guid = StableHash(projectPath);
+                    }
+
+                    yield return new PackageAsset(assetPath, metaPath, projectPath, guid);
+                }
+            }
         }
 
         private static string MapToUnityPackagePath(string relativePath)
